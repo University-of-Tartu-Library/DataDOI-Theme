@@ -1,0 +1,396 @@
+/**
+ * The contents of this file are subject to the license and copyright
+ * detailed in the LICENSE and NOTICE files at the root of the source
+ * tree and available online at
+ *
+ * http://www.dspace.org/license/
+ */
+
+/**
+ * You can put your own style in this file.
+ * It will be included in all color schemes
+ */
+
+
+/* @max : Header branding and trail appearance*/
+
+/* @max : Navbar size*/
+header .navbar-brand{
+    height: 100px;
+}
+
+/*  @max : Image size*/
+header .navbar-brand img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div.navbar-header {
+  margin-bottom: -9px;
+  margin-top: -10px;
+}
+
+/*Language and login buttons*/
+header .navbar-header.pull-right a:hover, header .navbar-header.pull-right a:focus {
+  background-color: #5C95C2 !important;
+}
+header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus, 
+header .navbar-default .navbar-nav:hover, header .navbar-default .navbar-nav:focus {
+  background-color: #5C95C2 !important;
+}
+.navbar-header.pull-right {
+  margin-top: 1px;
+}
+.nav.nav-pills.pull-left {
+  font-size: 22px;
+  margin-top: 8px;
+}
+.nav.nav-pills button {
+  padding: 10px;
+}
+#language-dropdown-toggle-xs{
+  margin-right: 15px;
+}
+/*@max : icons color*/
+header .navbar-default .navbar-toggle, header .navbar-default .navbar-nav {
+    color: white;
+}
+
+header .navbar-default .navbar-toggle > li > a, header .navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+/*Hub title*/
+.navbar-header > a:hover, .navbar-header > a:focus, .navbar-header > a:active {
+  color: unset;
+  text-decoration: unset;
+  outline: 0;
+}
+
+@media screen and (min-width: 390px ){
+  #hub-title {
+     color: white; 
+     
+     font-family: 'Cabin', sans-serif;
+     font-size: 70px;
+     font-weight: 600;
+     
+     letter-spacing: -1px;  
+     margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #hub-title {
+     color: white; 
+     
+     font-family: 'Cabin', sans-serif;
+     font-size: 50px;
+     font-weight: 600;
+     
+     letter-spacing: -1px;  
+     margin-bottom: 0px;
+  }
+}
+
+
+/*@max : header color*/
+header .navbar-default {
+    background-color:   #0060AA;
+}
+
+/*  @max : trail wrapper and navbar-toggle customizations*/
+.trail-wrapper {
+  background-color: #FFF;
+  border-bottom: 0px solid;
+  margin-bottom: 10px;
+}
+
+.trail-wrapper .row {
+  border-bottom: 1px solid #aaa;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+.navbar-toggle {
+  margin-right: 0px;
+  padding: 0px 0px;
+}
+
+/* customizing footer */
+footer .row > div {
+  border-top: 1px solid #aaa;
+}
+
+
+
+/* Image header and search/deposit boxes*/
+
+#image-header {
+  /*display: table;*/
+  display: flex;
+  position: relative;
+  height: 350px;
+  width: 100%;
+}
+
+
+#image-header-content {
+  text-align: center;
+  align-self: center;
+}
+
+#hub-search-slogan-row{
+  margin-bottom: 10px;
+}
+
+#hub-search-slogan-box p {
+   color: white; 
+   
+   font-family: 'Open Sans', sans-serif;
+   font-size: 23px;
+   line-height: 45px;
+
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 96, 170, 0.3);
+   margin-bottom: 0px;
+}
+
+#hub-search-row {
+  margin-bottom: 10px;
+}
+
+
+
+
+/*@max : item page view modifications*/
+
+/*@max : Item view author text*/
+ .simple-item-view-authors {
+    font-size: 20px;
+ }
+
+
+/*@max : 
+*    Sliding menu customizations!!!!
+*/
+
+/*@max : sidebar transitions*/
+
+.col-xs-6.col-sm-3.sidebar-home-offcanvas {
+  position: absolute;
+  top: 0px;
+  width: 25%;
+  background-color: #F7F7F7;
+}
+.row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+  right: -25%;
+}
+.row-offcanvas-right.active{
+  right: 25%;
+}
+.row-offcanvas-right {
+  right: 0;
+}
+.row-offcanvas {
+  position: relative;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+/* small screeens*/
+@media screen and (max-width: 767px) {
+  .row-offcanvas-right.active .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    margin-right: 25px;
+  }
+  .row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    right: -100%;
+  }
+  .row-offcanvas-right.active {
+    right: 100%;
+  }
+  .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    width: 100%;
+  }
+}
+
+/* medium screens*/
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .row-offcanvas-right.active .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    margin-right: 0px;
+  }
+ .row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    right: -50%;
+  }
+  .row-offcanvas-right.active {
+    right: 50%;
+  }
+  .col-xs-6.col-sm-3.sidebar-home-offcanvas {
+    width: 50%;
+  }
+}
+
+
+
+/*@max : Main page body */
+
+#main-container .row-offcanvas-home {
+    background-color: #FFF;
+}
+
+.navbar-toggle-home {
+    display: block !important;
+}
+
+
+/*@max : community browser image wrapper*/
+#aspect_artifactbrowser_CommunityBrowser_referenceSet_community-browser{
+  margin-left: -15px;
+}
+.image-wrapper {
+  height: 180px;
+  text-align: center;
+}
+img.homepage-community-logo {
+  max-width: 216px;
+  max-height: 120px;
+}
+.image-wrapper .community-borwser-link-wrapper {
+  height: 40px;
+  margin: 0 auto;
+  width: 90%;
+}
+.image-wrapper .community-borwser-link-wrapper span {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: block;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+
+
+/* Front page discovery and statistics columns */
+
+@media (min-width: $screen-lg-min) {
+  .homepage-discovery-column {
+    width: 36%;
+  }
+  .summary-statistics-column { 
+    width: 28%;
+   }
+}
+
+
+/* @max : no need for hotpink selection */
+/*
+@include selection {
+    color: white;
+    background: hotpink;
+}
+*/
+
+
+
+
+
+/* @max Bootstrap customizations */
+/* @max 5 colums https://blog.polarbits.co/2014/02/16/quick-tips-5-column-layout-with-twitter-bootstrap/ */
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+/* xxs column */
+.visible-xxs {
+  display: none!important;
+}
+@media (max-width: 472px) {
+  .col-xxs-12 {
+    float: none;
+    width: 100%;
+    
+    position: relative; left: 0; right: 0;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .hidden-xxs {
+    display: none!important;
+  }
+  .visible-xxs {
+    display: block!important;
+  }
+}
+
+
+/* theme modifications */
+
+.publication-records-modal, .publication-records-modal ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.publication-records-import-btn {
+  margin: 5px 0px 15px 0px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.imported {
+  background-color: #E2E2E2;
+}
+
+#aspect_submission_StepTransformer_div_StartSubmissionLookupStep {
+
+  #aspect_submission_StepTransformer_field_search {
+    width: 81%;
+    display: inline;
+  }
+
+  #aspect_submission_StepTransformer_field_lookup {
+    width:19%
+  }
+
+  .modal .modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  #aspect_submission_StepTransformer_item_publication-title{
+    margin-bottom:5px;
+  }
+}
