@@ -61,7 +61,8 @@ header .navbar-default .navbar-toggle > li > a, header .navbar-default .navbar-n
 }
 
 /*Hub title*/
-.navbar-header > a:hover, .navbar-header > a:focus, .navbar-header > a:active {
+.header-links a:hover, .header-links a:focus, .header-links a:active,
+.header-links a:visited, .header-links a:link {
   color: unset;
   text-decoration: unset;
   outline: 0;
@@ -128,7 +129,12 @@ footer .row > div {
 /* Image header and search/deposit boxes*/
 
 #image-header {
-  /*display: table;*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   position: relative;
   height: 350px;
@@ -162,6 +168,10 @@ footer .row > div {
   margin-bottom: 10px;
 }
 
+#deposit-row > div {
+  float: none;
+  margin: 0 auto;
+}
 
 
 

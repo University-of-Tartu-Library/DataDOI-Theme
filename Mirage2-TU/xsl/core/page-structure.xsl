@@ -134,8 +134,8 @@
                                                 <div class="col-xs-12 col-sm-12 col-md-9 main-content">
                                                     <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
-<!--                                                     <xsl:call-template name="debug-meta"/>
- -->
+                                                    <xsl:call-template name="debug-meta"/>
+
                                                     <div class="visible-xs visible-sm">
                                                         <xsl:call-template name="buildFooter"/>
                                                     </div>
@@ -379,7 +379,7 @@
                             <img class="img-responsive" src="{$theme-path}/images/logo_library.svg" />
                         </a>
  -->
-                        <span>
+                        <span class="header-links">
                              <a href="https://ut.ee" class="navbar-brand hidden-xs">
                                 <img class="img-responsive" src="{$theme-path}/images/logo_circle.png" />
                             </a>
@@ -1014,7 +1014,7 @@
 
     <xsl:template name="insert-home-search">
         <div class="action-bar hidden-xs">
-            <div id="image-header" style="background-image: url('{$theme-path}/images/stars-in-the-night-sky.jpeg');">
+            <div id="image-header" style="background-image: url('{$theme-path}images/stars-in-the-night-sky.jpeg');">
                 <div id="image-header-content" class="container">
 
 <!--
@@ -1160,8 +1160,9 @@
                         </div>
                     </div>
                     <div id="deposit-row" class="row">
-                        <div class="col-xs-6 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 col-sm-4 col-md-2">
-                            <button type="button" class="btn btn-primary btn-lg"><i18n:text>xmlui.general.submit_dataset</i18n:text></button>
+                        <!-- <div class="col-xs-6 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 col-sm-4 col-md-2"> -->
+                        <div>
+                            <a href="/xmlui/submit" role="button" class="btn btn-primary btn-lg"><i18n:text>xmlui.general.submit_dataset</i18n:text></a>
                         </div>
                     </div>
                 </div>
