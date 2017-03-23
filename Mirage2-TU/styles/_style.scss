@@ -181,6 +181,26 @@ footer .row > div {
  .simple-item-view-authors {
     font-size: 20px;
  }
+ .item-page-field-wrapper h5 {
+  margin-bottom: 3px;
+  font-weight: bold;
+ }
+span.morecontent {
+  display: none;
+}
+span.lessbutton {
+  display: none;
+}
+/*make pre unformatted*/
+pre {
+  border: 0; 
+  background-color: transparent;
+  white-space:pre-wrap;
+}
+/*bibtex modal no background*/
+.modal-backdrop {
+  background: none;
+}
 
 
 /*@max : 

@@ -252,7 +252,10 @@
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
-                                <xsl:copy-of select="node()"/>
+                                <xsl:call-template name="createShowMoreLessToggle">
+                                    <xsl:with-param name="text" select="node()" />
+                                    <xsl:with-param name="size" select="500" />
+                                </xsl:call-template>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:text>&#160;</xsl:text>
@@ -270,72 +273,103 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- @max : original authors template -->
+    <xsl:template name="createShowMoreLessToggle">
+        <xsl:param name="text" />
+        <xsl:param name="size" />
+        <xsl:choose>
+            <xsl:when test="string-length($text) &gt; $size">
+                <span>
+                    <xsl:value-of select="substring($text,1,$size)"/>
+                </span>
+                <span class="morecontent">
+                    <xsl:value-of select="substring($text,$size)"/>
+                </span>
+                <span>
+                    <span>...&#160;&#160;</span>
+                    <a href="" class="morelink"><i18n:text>xmlui.item_view.show_more</i18n:text></a>
+                </span>
+                <span class="lessbutton">
+                    <span>&#160;&#160;</span>
+                    <a class="lesslink" href=""><i18n:text>xmlui.item_view.show_less</i18n:text></a>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$text"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
-<!--     <xsl:template name="itemSummaryView-DIM-authors">
-        <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
-            <div class="simple-item-view-authors item-page-field-wrapper table">
-                <h5><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5>
-                <xsl:choose>
-                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
-                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="dim:field[@element='creator']">
-                        <xsl:for-each select="dim:field[@element='creator']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="dim:field[@element='contributor']">
-                        <xsl:for-each select="dim:field[@element='contributor']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </div>
-        </xsl:if>
-    </xsl:template> -->
 
-    <!-- @max : new authors template -->
+    <!-- @max : authors template + citation generation -->
 
     <xsl:template name="itemSummaryView-DIM-authors-modified">
-        <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
-            <div class="simple-item-view-authors item-page-field-wrapper table">
-                <xsl:choose>
-                    <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
-                        <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="dim:field[@element='creator']">
-                        <xsl:for-each select="dim:field[@element='creator']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="dim:field[@element='contributor']">
-                        <xsl:for-each select="dim:field[@element='contributor']">
-                            <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
-                    </xsl:otherwise>
-                </xsl:choose>
+        <div class="row">
+            <section class="authors col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
+                    <div class="simple-item-view-authors item-page-field-wrapper table">
+                        <xsl:choose>
+                            <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
+                                <!-- @max : in case we have too many authors, toggle them -->
+                                <xsl:variable name="authorsList">
+                                    <xsl:call-template name="itemSummaryView-DIM-authors-entry">
+                                        <xsl:with-param name="authors" select="dim:field[@element='contributor'][@qualifier='author']" />
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:call-template name="createShowMoreLessToggle">
+                                    <xsl:with-param name="text" select="$authorsList" />
+                                    <xsl:with-param name="size" select="200" />
+                                </xsl:call-template>
+                            </xsl:when>
+                            <xsl:when test="dim:field[@element='creator']">
+                                <xsl:call-template name="itemSummaryView-DIM-authors-entry">
+                                    <xsl:with-param name="authors" select="dim:field[@element='creator']" />
+                                </xsl:call-template>
+                            </xsl:when>
+                            <xsl:when test="dim:field[@element='contributor']">
+                                <xsl:call-template name="itemSummaryView-DIM-authors-entry">
+                                    <xsl:with-param name="authors" select="dim:field[@element='contributor']" />
+                                </xsl:call-template>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </div>
+                </xsl:if>
+            </section>
+            <aside class="bibtex-button hidden-xs col-sm-3 col-md-3 col-lg-2">
+                <a href="#" data-toggle="modal" data-target="#bibtexModal" data-remote="fase" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-export"></span>
+                    <xsl:text> </xsl:text>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-citation-bibtex</i18n:text>
+                </a>
+            </aside>
+        </div>
+        <!-- dialog for displaying bibtex -->
+        <div class="modal" id="bibtexModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="bibtex_content">Loading</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <i18n:text>xmlui.dri2xhtml.METS-1.0.close-bibtex</i18n:text>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </xsl:if>
+        </div>
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-authors-entry">
-        <div>
-            <xsl:if test="@authority">
-                <xsl:attribute name="class"><xsl:text>ds-dc_contributor_author-authority</xsl:text></xsl:attribute>
+        <xsl:param name="authors" />
+        <xsl:for-each select="$authors">
+            <xsl:value-of select="./node()"/>
+            <xsl:if test="position() != last()">
+                <xsl:text>; </xsl:text>
             </xsl:if>
-            <xsl:copy-of select="node()"/>
-        </div>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-keywords">

@@ -134,8 +134,8 @@
                                                 <div class="col-xs-12 col-sm-12 col-md-9 main-content">
                                                     <xsl:apply-templates select="*[not(self::dri:options)]"/>
 
-                                                    <xsl:call-template name="debug-meta"/>
-
+<!--                                                     <xsl:call-template name="debug-meta"/>
+ -->
                                                     <div class="visible-xs visible-sm">
                                                         <xsl:call-template name="buildFooter"/>
                                                     </div>

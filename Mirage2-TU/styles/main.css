@@ -10082,11 +10082,41 @@ footer .row > div {
   font-size: 20px;
 }
 
+/* line 184, _style.scss */
+.item-page-field-wrapper h5 {
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+/* line 188, _style.scss */
+span.morecontent {
+  display: none;
+}
+
+/* line 191, _style.scss */
+span.lessbutton {
+  display: none;
+}
+
+/*make pre unformatted*/
+/* line 195, _style.scss */
+pre {
+  border: 0;
+  background-color: transparent;
+  white-space: pre-wrap;
+}
+
+/*bibtex modal no background*/
+/* line 201, _style.scss */
+.modal-backdrop {
+  background: none;
+}
+
 /*@max : 
 *    Sliding menu customizations!!!!
 */
 /*@max : sidebar transitions*/
-/* line 192, _style.scss */
+/* line 212, _style.scss */
 .col-xs-6.col-sm-3.sidebar-home-offcanvas {
   position: absolute;
   top: 0px;
@@ -10094,22 +10124,22 @@ footer .row > div {
   background-color: #F7F7F7;
 }
 
-/* line 198, _style.scss */
+/* line 218, _style.scss */
 .row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
   right: -25%;
 }
 
-/* line 201, _style.scss */
+/* line 221, _style.scss */
 .row-offcanvas-right.active {
   right: 25%;
 }
 
-/* line 204, _style.scss */
+/* line 224, _style.scss */
 .row-offcanvas-right {
   right: 0;
 }
 
-/* line 207, _style.scss */
+/* line 227, _style.scss */
 .row-offcanvas {
   position: relative;
   -webkit-transition: all .25s ease-out;
@@ -10119,85 +10149,85 @@ footer .row > div {
 
 /* small screeens*/
 @media screen and (max-width: 767px) {
-  /* line 216, _style.scss */
+  /* line 236, _style.scss */
   .row-offcanvas-right.active .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     margin-right: 25px;
   }
 
-  /* line 219, _style.scss */
+  /* line 239, _style.scss */
   .row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     right: -100%;
   }
 
-  /* line 222, _style.scss */
+  /* line 242, _style.scss */
   .row-offcanvas-right.active {
     right: 100%;
   }
 
-  /* line 225, _style.scss */
+  /* line 245, _style.scss */
   .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     width: 100%;
   }
 }
 /* medium screens*/
 @media screen and (min-width: 767px) and (max-width: 991px) {
-  /* line 232, _style.scss */
+  /* line 252, _style.scss */
   .row-offcanvas-right.active .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     margin-right: 0px;
   }
 
-  /* line 235, _style.scss */
+  /* line 255, _style.scss */
   .row-offcanvas-right .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     right: -50%;
   }
 
-  /* line 238, _style.scss */
+  /* line 258, _style.scss */
   .row-offcanvas-right.active {
     right: 50%;
   }
 
-  /* line 241, _style.scss */
+  /* line 261, _style.scss */
   .col-xs-6.col-sm-3.sidebar-home-offcanvas {
     width: 50%;
   }
 }
 /*@max : Main page body */
-/* line 250, _style.scss */
+/* line 270, _style.scss */
 #main-container .row-offcanvas-home {
   background-color: #FFF;
 }
 
-/* line 254, _style.scss */
+/* line 274, _style.scss */
 .navbar-toggle-home {
   display: block !important;
 }
 
 /*@max : community browser image wrapper*/
-/* line 260, _style.scss */
+/* line 280, _style.scss */
 #aspect_artifactbrowser_CommunityBrowser_referenceSet_community-browser {
   margin-left: -15px;
 }
 
-/* line 263, _style.scss */
+/* line 283, _style.scss */
 .image-wrapper {
   height: 180px;
   text-align: center;
 }
 
-/* line 267, _style.scss */
+/* line 287, _style.scss */
 img.homepage-community-logo {
   max-width: 216px;
   max-height: 120px;
 }
 
-/* line 271, _style.scss */
+/* line 291, _style.scss */
 .image-wrapper .community-borwser-link-wrapper {
   height: 40px;
   margin: 0 auto;
   width: 90%;
 }
 
-/* line 276, _style.scss */
+/* line 296, _style.scss */
 .image-wrapper .community-borwser-link-wrapper span {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -10208,12 +10238,12 @@ img.homepage-community-logo {
 
 /* Front page discovery and statistics columns */
 @media (min-width: 1200px) {
-  /* line 289, _style.scss */
+  /* line 309, _style.scss */
   .homepage-discovery-column {
     width: 36%;
   }
 
-  /* line 292, _style.scss */
+  /* line 312, _style.scss */
   .summary-statistics-column {
     width: 28%;
   }
@@ -10227,7 +10257,7 @@ img.homepage-community-logo {
 */
 /* @max Bootstrap customizations */
 /* @max 5 colums https://blog.polarbits.co/2014/02/16/quick-tips-5-column-layout-with-twitter-bootstrap/ */
-/* line 313, _style.scss */
+/* line 333, _style.scss */
 .col-xs-5ths,
 .col-sm-5ths,
 .col-md-5ths,
@@ -10238,41 +10268,41 @@ img.homepage-community-logo {
   padding-left: 10px;
 }
 
-/* line 322, _style.scss */
+/* line 342, _style.scss */
 .col-xs-5ths {
   width: 20%;
   float: left;
 }
 
 @media (min-width: 768px) {
-  /* line 327, _style.scss */
+  /* line 347, _style.scss */
   .col-sm-5ths {
     width: 20%;
     float: left;
   }
 }
 @media (min-width: 992px) {
-  /* line 333, _style.scss */
+  /* line 353, _style.scss */
   .col-md-5ths {
     width: 20%;
     float: left;
   }
 }
 @media (min-width: 1200px) {
-  /* line 339, _style.scss */
+  /* line 359, _style.scss */
   .col-lg-5ths {
     width: 20%;
     float: left;
   }
 }
 /* xxs column */
-/* line 346, _style.scss */
+/* line 366, _style.scss */
 .visible-xxs {
   display: none !important;
 }
 
 @media (max-width: 472px) {
-  /* line 350, _style.scss */
+  /* line 370, _style.scss */
   .col-xxs-12 {
     float: none;
     width: 100%;
@@ -10284,53 +10314,53 @@ img.homepage-community-logo {
     padding-left: 15px;
   }
 
-  /* line 359, _style.scss */
+  /* line 379, _style.scss */
   .hidden-xxs {
     display: none !important;
   }
 
-  /* line 362, _style.scss */
+  /* line 382, _style.scss */
   .visible-xxs {
     display: block !important;
   }
 }
 /* theme modifications */
-/* line 370, _style.scss */
+/* line 390, _style.scss */
 .publication-records-modal, .publication-records-modal ul {
   list-style-type: none;
   padding-left: 0px;
 }
 
-/* line 375, _style.scss */
+/* line 395, _style.scss */
 .publication-records-import-btn {
   margin: 5px 0px 15px 0px;
 }
 
-/* line 379, _style.scss */
+/* line 399, _style.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 383, _style.scss */
+/* line 403, _style.scss */
 .imported {
   background-color: #E2E2E2;
 }
 
-/* line 389, _style.scss */
+/* line 409, _style.scss */
 #aspect_submission_StepTransformer_div_StartSubmissionLookupStep #aspect_submission_StepTransformer_field_search {
   width: 81%;
   display: inline;
 }
-/* line 394, _style.scss */
+/* line 414, _style.scss */
 #aspect_submission_StepTransformer_div_StartSubmissionLookupStep #aspect_submission_StepTransformer_field_lookup {
   width: 19%;
 }
-/* line 398, _style.scss */
+/* line 418, _style.scss */
 #aspect_submission_StepTransformer_div_StartSubmissionLookupStep .modal .modal-body {
   max-height: 500px;
   overflow-y: auto;
 }
-/* line 403, _style.scss */
+/* line 423, _style.scss */
 #aspect_submission_StepTransformer_div_StartSubmissionLookupStep #aspect_submission_StepTransformer_item_publication-title {
   margin-bottom: 5px;
 }

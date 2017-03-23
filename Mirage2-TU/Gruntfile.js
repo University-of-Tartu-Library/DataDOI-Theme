@@ -14,6 +14,8 @@ module.exports = function (grunt) {
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
 
+    
+
     grunt.initConfig({
         copy: {
             classic_mirage_color_scheme: {
@@ -118,4 +120,7 @@ module.exports = function (grunt) {
         'classic_mirage_color_scheme',
         'prod'
     ]);
+
 };
+
+

@@ -26,8 +26,13 @@
 	<!-- @max : custom mesages -->
 	<message key="xmlui.general.frontpage_welcome_header">University of Tartu DataHub</message>
 	<message key="xmlui.general.frontpage_welcome_message">The DataHub is an open access repository for publishing research data from the University of Tartu</message>
-	<message key="xmlui.item_view.item_type">Item type</message>
 	<message key="xmlui.general.submit_dataset">Submit Dataset</message>
+
+	<message key="xmlui.item_view.item_type">Item type</message>
+	<message key="xmlui.item_view.show_more">Show more</message>
+	<message key="xmlui.item_view.show_less">Show less</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">Export to BibTex</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.close-bibtex">Close</message>
 
 
 	<!-- General keys -->
