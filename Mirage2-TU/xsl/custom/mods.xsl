@@ -60,13 +60,72 @@
                 <xsl:apply-templates/>
             </div>
             <div class="homepage-discovery-column most-viewed-column col-sm-12  col-md-6">
-                <h2 class="ds-div-head page-header">Most viewed</h2>
+                <h2 class="ds-div-head page-header"><i18n:text>xmlui.general.most_viewed</i18n:text></h2>
                 <div>
                     <xsl:apply-templates select="document('http://localhost:8080/static/pops.xml')/dri:document/dri:referenceSet" />
                 </div>
             </div>
         </div>
     </xsl:template>
+
+    <!-- Front page about text -->
+    <xsl:template name="aboutText">
+        <div id="features">
+            <h2 class="ds-div-head page-header"> Why use it? </h2>
+
+            <div class="row" id="feature-container">
+
+                <div class="col-xs-12 col-sm-4 feature">
+                    <i class="fa fa-globe fa-5x fa-fw"></i>
+                    <br/>
+                    <p>
+                        <h4> Increased Visibility </h4>
+                        <p> Content on DataHub is indexed by Google Scholar, ETIS, and others, exposing your research to worldwide audience. </p>
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 feature">
+                    <img class="img-responsive center" src="{$theme-path}images/DOI_logo.svg" />
+
+                    <p>
+                        <h4> Digital object identifier </h4>
+                        <p> 
+                            All DataHub publications are prvoided with a valid DOI by datacite (<a href="http://datacite.ee">http://datacite.ee</a>).
+                            This allows you to easily share any publication or dataset with anyone and to cite it in future publications.
+                        </p>
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 feature">
+                    <i class="fa fa-shield fa-5x fa-fw"></i>
+                    <br/>
+                    <p>
+                        <h4> Security </h4>
+                        <p> 
+                            The DataHub is an institutaional repository that guarantees secyrity and longevity of your data.
+                        </p>
+                    </p>
+                </div>
+
+
+            </div>
+
+<!--             <div class="col-xs-12 col-sm-6">
+                <i class="fa fa-bullhorn fa-4x fa-pull-left fa-fw"></i>
+                <h4> Increased Visibility </h4>
+                <p> Content on DataHub is indexed by Google Scholar, ETIS, and others, exposing your research to worldwide audience. </p>
+            </div>
+ -->
+
+
+
+        </div>
+    </xsl:template>
+
+
+
+
+
 
 <!-- Customiza front page discovery. Abondoned.
     <xsl:template match="dri:div[@id='aspect.discovery.SiteRecentSubmissions.div.site-home']">

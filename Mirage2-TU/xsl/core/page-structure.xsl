@@ -108,9 +108,13 @@
                                             <div class="horizontal-slider clearfix">
                                                 
                                                 <!-- @max : sidebar, body locations -->
-                                                <div class="col-xs-12">
+                                                <div class="col-xs-12 body-home">
                                                     <!-- <xsl:call-template name="insert-home-search"/> -->
                                                     <xsl:apply-templates select="*[not(self::dri:options)]"/>
+
+
+                                                    <!-- Description text -->
+                                                    <xsl:call-template name="aboutText"/>
                                                     
                                                      <!-- @max : debugging stuff  -->
 <!--                                                     <xsl:call-template name="debug-meta"/>
@@ -356,6 +360,7 @@
 
             <!-- @max : add some fonts -->
             <link href="https://fonts.googleapis.com/css?family=Cabin:600|Open+Sans:600" rel="stylesheet"/> 
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
 
 
         </head>
@@ -769,7 +774,7 @@
                             <a href="http://ut.ee" target="_blank">University of Tartu</a>
                         </div>
                         <div class="hidden-print">
-                            <a>-
+<!--                             <a>-
                                 <xsl:attribute name="href">
                                     <xsl:value-of
                                             select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
@@ -778,12 +783,14 @@
                                 <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text>
                             </a>
                             <xsl:text> | </xsl:text>
-                            <a>
+ -->
+                            <a>-
                                 <xsl:attribute name="href">
                                     <xsl:value-of
                                             select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                                     <xsl:text>/feedback</xsl:text>
                                 </xsl:attribute>
+                                <i18n:text>xmlui.dri2xhtml.structural.contact-link</i18n:text><xsl:text> / </xsl:text>
                                 <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                             </a>
                         </div>

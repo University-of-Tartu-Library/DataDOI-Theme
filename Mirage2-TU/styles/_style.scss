@@ -103,7 +103,6 @@ header .navbar-default {
 .trail-wrapper {
   background-color: #FFF;
   border-bottom: 0px solid;
-  margin-bottom: 10px;
 }
 
 .trail-wrapper .row {
@@ -276,6 +275,24 @@ span.statistics-views {
   float: right;
 }
 
+/* repository features */
+#features h4 {
+  font-weight: 600;
+}
+#features img {
+  height: 90px;
+  margin: auto;
+}
+#features i {
+  font-size: 90px;
+}
+.feature {
+  text-align: center;
+}
+#feature-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
 
 /*@max : Main page body */
@@ -283,7 +300,9 @@ span.statistics-views {
 #main-container .row-offcanvas-home {
     background-color: #FFF;
 }
-
+div.col-xs-12.body-home {
+  margin-top: 30px;
+}
 .navbar-toggle-home {
     display: block !important;
 }
@@ -315,7 +334,10 @@ img.homepage-community-logo {
 }
 
 
-
+/*Item submission page*/
+#aspect_submission_StepTransformer_field_dc_subject {
+  width: 160px;
+}
 /* Front page discovery and statistics columns */
 
 /*@media (min-width: $screen-lg-min) {

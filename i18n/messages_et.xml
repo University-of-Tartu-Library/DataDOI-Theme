@@ -27,6 +27,9 @@
 	<message key="xmlui.general.frontpage_welcome_header">Tartu Ülikooli DataHub</message>
 	<message key="xmlui.general.frontpage_welcome_message">DataHub on avatud repositoorium Tartu Ülikooli teadusandmete publitseerimise jaoks</message>
 	<message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Uued</message>
+	<message key="xmlui.general.most_viewed">Enim vaadatud viimase 7 päevaga</message>
+	<message key="xmlui.general.why_use">Miks seda kasutada?</message>
+
 	<message key="xmlui.item_view.item_type">Kirje tüüp</message>
 	<message key="xmlui.item_view.show_more">Rohkem</message>
 	<message key="xmlui.item_view.show_less">Vähem</message>
