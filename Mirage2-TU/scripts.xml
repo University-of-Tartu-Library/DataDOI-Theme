@@ -29,6 +29,7 @@
     <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js">&#160;</script>
 
     <script src="vendor/moment/min/moment.min.js">&#160;<script>
+    <script src="vendor/dist/js/select2.min.js">&#160;<script>
     <script src="scripts/utils.js">&#160;</script>
     <script src="scripts/search-controls.js">&#160;</script>
     <script src="scripts/sidebar.js">&#160;</script>
@@ -41,7 +42,8 @@
     <script src="scripts/vendor-extensions.js">&#160;</script>
     <script src="scripts/google-stats-dates.js">&#160;</script>
     <script src="scripts/templates.js">&#160;</script>
-   <!-- <script src="scripts/tu_custom.js">&#160;</script>-->
+    <script src="vendor/select2/dist/js/select2.min.js"></script>
+    <script src="scripts/tu_custom.js">&#160;</script>
 
     <!-- authorLookup and its dependencies -->
     <script src="vendor/datatables/media/js/jquery.dataTables.js">&#160;</script>

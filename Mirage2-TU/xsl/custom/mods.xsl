@@ -52,6 +52,22 @@
     <xsl:template match="dri:div[@id='aspect.artifactbrowser.CommunityBrowser.div.comunity-browser']/dri:p">
     </xsl:template>
 
+
+    <!-- Add statistics to front page -->
+    <xsl:template match="dri:div[@id='aspect.discovery.SiteRecentSubmissions.div.site-home']">
+        <div class="row">
+            <div class="homepage-discovery-column recent-submissions-column col-sm-12  col-md-6">
+                <xsl:apply-templates/>
+            </div>
+            <div class="homepage-discovery-column most-viewed-column col-sm-12  col-md-6">
+                <h2 class="ds-div-head page-header">Most viewed</h2>
+                <div>
+                    <xsl:apply-templates select="document('http://localhost:8080/static/pops.xml')/dri:document/dri:referenceSet" />
+                </div>
+            </div>
+        </div>
+    </xsl:template>
+
 <!-- Customiza front page discovery. Abondoned.
     <xsl:template match="dri:div[@id='aspect.discovery.SiteRecentSubmissions.div.site-home']">
         <div class="row">

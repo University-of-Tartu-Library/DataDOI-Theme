@@ -32,3 +32,6 @@ Temporary Items
 # Node
 node_modules/
 .tmp/
+
+#GA
+test-dspace.p12

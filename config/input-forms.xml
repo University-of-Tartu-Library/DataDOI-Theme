@@ -129,6 +129,17 @@
          <required></required>
        </field>
 
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier>citation</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Citation</label>
+         <input-type>onebox</input-type>
+         <hint>If (a part of) this work has been published before, enter the standard citation for its previous instance.</hint>
+         <required></required>
+       </field>
+
       </page>
      </form>
 
@@ -143,16 +154,6 @@
          <required></required>
        </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>identifier</dc-element>
-         <dc-qualifier>citation</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Citation</label>
-         <input-type>onebox</input-type>
-         <hint>Enter the standard citation for the previously issued instance of this item.</hint>
-         <required></required>
-       </field>
 
        <field>
          <dc-schema>dc</dc-schema>
@@ -248,6 +249,18 @@ it, please enter the types and the actual numbers or codes.</hint>
  <form-value-pairs>
    <value-pairs value-pairs-name="common_types" dc-term="type">
      <pair>
+       <displayed-value>Article</displayed-value>
+       <stored-value>Article</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Book</displayed-value>
+       <stored-value>Book</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Chapter</displayed-value>
+       <stored-value>Chapter</stored-value>
+     </pair>
+     <pair>
        <displayed-value>Dataset</displayed-value>
        <stored-value>Dataset</stored-value>
      </pair>
@@ -260,10 +273,6 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>Presentation</stored-value>
      </pair>
      <pair>
-       <displayed-value>Recording</displayed-value>
-       <stored-value>Recording</stored-value>
-     </pair>
-     <pair>
        <displayed-value>Software</displayed-value>
        <stored-value>Software</stored-value>
      </pair>
@@ -272,8 +281,8 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value>Supplimentary Material</stored-value>
      </pair>
      <pair>
-       <displayed-value>Video</displayed-value>
-       <stored-value>Video</stored-value>
+       <displayed-value>Thesis</displayed-value>
+       <stored-value>Thesis</stored-value>
      </pair>
      <pair>
        <displayed-value>Other</displayed-value>

@@ -12,7 +12,8 @@
     "html5shiv": "3.7.2",
     "holderjs": "2.4.1",
     "datatables": "1.10.3",
-    "moment": "^2.18.1"
+    "moment": "^2.18.1",
+    "select2": "^4.0.3"
   },
   "devDependencies": {}
 }

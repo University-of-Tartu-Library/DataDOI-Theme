@@ -185,6 +185,9 @@ footer .row > div {
   margin-bottom: 3px;
   font-weight: bold;
  }
+ .item-table-row {
+  
+ }
 span.morecontent {
   display: none;
 }
@@ -196,6 +199,11 @@ pre {
   border: 0; 
   background-color: transparent;
   white-space:pre-wrap;
+}
+
+/*Export buttons*/
+aside.export-button > button {
+  float: right;
 }
 /*bibtex modal no background*/
 .modal-backdrop {
@@ -263,6 +271,11 @@ pre {
   }
 }
 
+/* front page statistics */
+span.statistics-views {
+  float: right;
+}
+
 
 
 /*@max : Main page body */
@@ -305,7 +318,7 @@ img.homepage-community-logo {
 
 /* Front page discovery and statistics columns */
 
-@media (min-width: $screen-lg-min) {
+/*@media (min-width: $screen-lg-min) {
   .homepage-discovery-column {
     width: 36%;
   }
@@ -314,7 +327,7 @@ img.homepage-community-logo {
    }
 }
 
-
+*/
 /* @max : no need for hotpink selection */
 /*
 @include selection {

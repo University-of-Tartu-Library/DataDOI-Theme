@@ -219,6 +219,13 @@
         </xsl:variable>
         <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
         <li>
+            <!-- @max : if item contains attribute views - display them in a badge. Only used for statistics -->
+            <xsl:if test="@views">
+                <span class="badge statistics-views">
+                    <xsl:value-of select="@views" />
+                </span>
+            </xsl:if>
+
             <xsl:attribute name="class">
                 <xsl:text>ds-artifact-item </xsl:text>
                 <xsl:choose>

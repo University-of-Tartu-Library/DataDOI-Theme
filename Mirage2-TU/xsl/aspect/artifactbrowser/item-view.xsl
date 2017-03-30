@@ -337,12 +337,26 @@
                     </div>
                 </xsl:if>
             </section>
-            <aside class="bibtex-button hidden-xs col-sm-3 col-md-3 col-lg-2">
-                <a href="#" data-toggle="modal" data-target="#bibtexModal" data-remote="fase" class="btn btn-default btn-xs">
+            <aside class="export-button hidden-xs col-sm-3 col-md-3 col-lg-2">
+                <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-export"></span>
                     <xsl:text> </xsl:text>
-                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-citation-bibtex</i18n:text>
-                </a>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.item-citation-export</i18n:text>
+                    <xsl:text> </xsl:text>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:;" data-toggle="modal" data-target="#bibtexModal" data-remote="fase">
+                            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-citation-bibtex</i18n:text>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="endnoteCitation">
+                            <i18n:text>xmlui.dri2xhtml.METS-1.0.item-citation-endnote</i18n:text>
+                        </a>
+                    </li>
+                </ul>                        
             </aside>
         </div>
         <!-- dialog for displaying bibtex -->
@@ -379,8 +393,12 @@
                     <i18n:text>xmlui.ArtifactBrowser.AdvancedSearch.type_keyword</i18n:text>
                 </h5>
                 <xsl:for-each select="dim:field[@element='subject']">
-                    <xsl:copy-of select="node()"/>; 
+                    <xsl:value-of select="./node()"/>
+                    <xsl:if test="position() != last()">
+                        <xsl:text>; </xsl:text>
+                    </xsl:if>
                 </xsl:for-each>
+
             </div>
         </xsl:if>
     </xsl:template>
@@ -461,54 +479,52 @@
         <xsl:choose>
             <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
             <!-- @max : new file-table -->
-                <div class="row col-md-12">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th class="col-md-3"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-name</i18n:text></th>
-                                <th class="col-md-1"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-size</i18n:text></th>
-                                <th class="col-md-8"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-description</i18n:text></th>
-                            </tr>
-                        </thead>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="col-md-3"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-name</i18n:text></th>
+                            <th class="col-md-1"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-size</i18n:text></th>
+                            <th class="col-md-8"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-description</i18n:text></th>
+                        </tr>
+                    </thead>
 
-                        <!--Not sure what it does? @max-->
-                        <xsl:variable name="label-1">
-                                <xsl:choose>
-                                    <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.1')">
-                                        <xsl:value-of select="confman:getProperty('mirage2.item-view.bitstream.href.label.1')"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text>label</xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                        </xsl:variable>
+                    <!--Not sure what it does? @max-->
+                    <xsl:variable name="label-1">
+                            <xsl:choose>
+                                <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.1')">
+                                    <xsl:value-of select="confman:getProperty('mirage2.item-view.bitstream.href.label.1')"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>label</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                    </xsl:variable>
 
-                        <xsl:variable name="label-2">
-                                <xsl:choose>
-                                    <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.2')">
-                                        <xsl:value-of select="confman:getProperty('mirage2.item-view.bitstream.href.label.2')"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:text>title</xsl:text>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                        </xsl:variable>
+                    <xsl:variable name="label-2">
+                            <xsl:choose>
+                                <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.2')">
+                                    <xsl:value-of select="confman:getProperty('mirage2.item-view.bitstream.href.label.2')"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>title</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                    </xsl:variable>
 
-                        <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
-                            <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
-                                <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
-                                <xsl:with-param name="mimetype" select="@MIMETYPE" />
-                                <xsl:with-param name="label-1" select="$label-1" />
-                                <xsl:with-param name="label-2" select="$label-2" />
-                                <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
-                                <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
-                                <xsl:with-param name="size" select="@SIZE" />
-                                <xsl:with-param name="description" select="@DESCRIPTION"/>
-                            </xsl:call-template>
-                        </xsl:for-each>
+                    <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
+                        <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
+                            <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
+                            <xsl:with-param name="mimetype" select="@MIMETYPE" />
+                            <xsl:with-param name="label-1" select="$label-1" />
+                            <xsl:with-param name="label-2" select="$label-2" />
+                            <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
+                            <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
+                            <xsl:with-param name="size" select="@SIZE" />
+                            <xsl:with-param name="description" select="@DESCRIPTION"/>
+                        </xsl:call-template>
+                    </xsl:for-each>
 
-                    </table>
-                </div>
+                </table>
 
 
 <!--                 <div class="item-page-field-wrapper table word-break">

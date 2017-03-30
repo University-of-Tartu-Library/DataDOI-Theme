@@ -31,6 +31,8 @@
 	<message key="xmlui.item_view.show_more">Rohkem</message>
 	<message key="xmlui.item_view.show_less">Vähem</message>
 	<message key="xmlui.general.submit_dataset">Sisesta andmekogum</message>
+	
+	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">Export to BibTex</message>
 
 
  
@@ -908,7 +910,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
 	<message key="xmlui.Submission.submit.CCLicenseStep.ccws_error">Ilmnes viga ... {0}</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.head">Creative Commons Litsents</message>
-	<message key="xmlui.Submission.submit.CCLicenseStep.info1">Soovi korral võid oma nimetusele lisada <a href="http://creativecommons.org/">Creative Commons</a> Litsentsi. <strong>Creative Commons litsentsid määravad, mida sinu tööd lugevad inimesed sellega teha tohivad.</strong> Creative Commons litsentsi valimiseks kliki alloleval nupul. Sind suunatakse Creative Commons veebilehele, millest leiad erinevad litsenseerimise võimalused.  Pärast litsentsi valimist suunatakse sind tagasi sellele lehele.</message>
+	<message key="xmlui.Submission.submit.CCLicenseStep.info1">Siin võid oma nimetusele lisada <a href="http://creativecommons.org/">Creative Commons</a> Litsentsi. <strong>Creative Commons litsentsid määravad, mida sinu tööd lugevad inimesed sellega teha tohivad.</strong> Kui tahad mingit teist litsentsi kasutada võid alati valida "Ilma CC litsentsita" optsiooni ja üles laadida oma litsents fail.</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Vali litsents</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Liigu Creative Commons veebilehele litsentsi valimiseks</message>
 	<message key="xmlui.Submission.submit.CCLicenseStep.license">Litsents</message>

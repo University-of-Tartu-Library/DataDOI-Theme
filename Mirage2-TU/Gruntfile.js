@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: ['scripts.xml'],
-                        dest: 'scripts-dist.xml'
+                       dest: 'scripts-dist.xml'
                     }
                 ]
             }
@@ -108,13 +108,13 @@ module.exports = function (grunt) {
         'shared-steps','uglify','usemin'
     ]);
     grunt.registerTask('no-compass-dev', [
-        'shared-steps','uglify:generated'
+        'shared-steps'//,'uglify:generated'
     ]);
     grunt.registerTask('prod', [
         'compass:prod', 'no-compass-prod'
     ]);
     grunt.registerTask('dev', [
-        'compass:dev', 'no-compass-dev'
+        'useminPrepare'
     ]);
     grunt.registerTask('default', [
         'classic_mirage_color_scheme',

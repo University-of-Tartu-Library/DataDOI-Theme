@@ -27,11 +27,14 @@
 	<message key="xmlui.general.frontpage_welcome_header">University of Tartu DataHub</message>
 	<message key="xmlui.general.frontpage_welcome_message">The DataHub is an open access repository for publishing research data from the University of Tartu</message>
 	<message key="xmlui.general.submit_dataset">Submit Dataset</message>
+	<message key="xmlui.general.most_viewed">Most Viewed</message>
 
 	<message key="xmlui.item_view.item_type">Item type</message>
 	<message key="xmlui.item_view.show_more">Show more</message>
 	<message key="xmlui.item_view.show_less">Show less</message>
-	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">Export to BibTex</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-export">Export</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-endnote">EndNote (RIS)</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">BibTex</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.close-bibtex">Close</message>
 
 
@@ -903,7 +906,7 @@
 	<!-- org.dspace.app.xmlui.Submission.submit.CCLicenseStep -->
         <message key="xmlui.Submission.submit.CCLicenseStep.ccws_error">An error occurred ... {0}</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.head">License Your Work</message>
-        <message key="xmlui.Submission.submit.CCLicenseStep.info1">If you wish, you may add a <a href="http://creativecommons.org/">Creative Commons</a> License to your item. <strong>Creative Commons licenses govern what people who read your work may then do with it.</strong></message>
+        <message key="xmlui.Submission.submit.CCLicenseStep.info1">If you wish, you may add a <a href="http://creativecommons.org/">Creative Commons</a> License to your item. <strong>Creative Commons licenses govern what people who read your work may then do with it.</strong> If you want to use some other type of license you can choose "No Creative Commons License" option and upload you own license file using previous step.</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_choose_creative_commons">Choose a license</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.submit_to_creative_commons">Proceed to Creative Commons website to select a license</message>
         <message key="xmlui.Submission.submit.CCLicenseStep.license">License Type</message>

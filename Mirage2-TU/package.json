@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "bower": "1.7.9",
+    "concat-scripts-in-html": "^0.1.0",
     "grunt": "~1.0.1",
     "grunt-cli": "1.2.0",
     "grunt-contrib-coffee": "~1.0.0",
