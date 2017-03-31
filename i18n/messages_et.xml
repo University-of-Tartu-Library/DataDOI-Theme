@@ -24,15 +24,25 @@
 		-->
 
 	<!-- @max : custom mesages -->
-	<message key="xmlui.general.frontpage_welcome_header">Tartu Ülikooli DataHub</message>
-	<message key="xmlui.general.frontpage_welcome_message">DataHub on avatud repositoorium Tartu Ülikooli teadusandmete publitseerimise jaoks</message>
+	<message key="xmlui.general.frontpage_welcome_header">Tartu Ülikooli DataDOI</message>
+	<message key="xmlui.general.frontpage_welcome_message">DataDOI on avatud repositoorium Tartu Ülikooli teadusandmete publitseerimise jaoks</message>
 	<message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Uued</message>
+
 	<message key="xmlui.general.most_viewed">Enim vaadatud viimase 7 päevaga</message>
 	<message key="xmlui.general.why_use">Miks seda kasutada?</message>
+	<message key="xmlui.general.why_use.title1">Suurem nähtavaus</message>
+	<message key="xmlui.general.why_use.title2">Digital object identifier</message>
+	<message key="xmlui.general.why_use.title3">Turvalisus</message>
+	<message key="xmlui.general.why_use.reason1">DataDOI indekseerivad Google Scholar, Google ja teised, paljastades sinu uurimistööd ülemaailma. </message>
+	<message key="xmlui.general.why_use.reason2">Kõik DataDOI kirjad omavad kehtivad DOI DataCite'st <a href="http://datacite.ee">(http://datacite.ee)</a>. See võimaldab lihtsasti jagada publekatsioonid või andmekogumid teistega ja tsiteerida neid tulevikus.</message>
+	<message key="xmlui.general.why_use.reason3">DataDOI on Tartu Ülikooli repositoorium, mis tagab turvalisust ja pikaealisust teile andmetele.</message>
 
 	<message key="xmlui.item_view.item_type">Kirje tüüp</message>
 	<message key="xmlui.item_view.show_more">Rohkem</message>
 	<message key="xmlui.item_view.show_less">Vähem</message>
+	<message key="xmlui.mirage2.itemSummaryView.MetaData">Metaandmed </message>
+	<message key="xmlui.mirage2.itemSummaryView.MetaData">Kollektsioonid </message>
+
 	<message key="xmlui.general.submit_dataset">Sisesta andmekogum</message>
 	
 	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">Export to BibTex</message>
@@ -40,10 +50,10 @@
 
  
 	<!-- General keys -->
-	<message key="xmlui.general.dspace_home">DataHub</message>
+	<message key="xmlui.general.dspace_home">DataDOI</message>
 	<message key="xmlui.general.search">Otsi</message>
 	<message key="xmlui.general.go">Otsi</message>
-	<message key="xmlui.general.go_home">Mine DataHube esilehele</message>
+	<message key="xmlui.general.go_home">Mine DataDOIe esilehele</message>
 	<message key="xmlui.general.save">Salvesta</message>
 	<message key="xmlui.general.cancel">Tühista</message>
 	<message key="xmlui.general.return">Tagasi</message>
@@ -81,7 +91,7 @@
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">DataHub digitaalrepositooriumi süsteem salvestab, säilitab, indekseerib ja levitab digitaalset teadusinformatsiooni. </message>
+	<message key="xmlui.feed.general_description">DataDOI digitaalrepositooriumi süsteem salvestab, säilitab, indekseerib ja levitab digitaalset teadusinformatsiooni. </message>
        <message key="xmlui.feed.header">RSS uudisvood</message>
 	<message key="xmlui.feed.logo_title">Kanali logo</message>
 	<message key="xmlui.feed.untitled">Pealkirjata</message>
@@ -113,7 +123,7 @@
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head2">Otsingule vastavad valdkonnad või andmekogumid</message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.head3">Otsingule vastavad nimetused </message>
 	<message key="xmlui.ArtifactBrowser.AbstractSearch.no_results">Ei leitud ühtegi vastet.</message>
-	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">Kogu DataHub'st</message>
+	<message key="xmlui.ArtifactBrowser.AbstractSearch.all_of_dspace">Kogu DataDOI'st</message>
 
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.title">pealkiri</message>
    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.dateissued">avaldamisaeg</message>
@@ -204,7 +214,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">Otsingu ulatus</message>
-	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">Kogu TÜ DataHub</message>
+	<message key="xmlui.ArtifactBrowser.CollectionViewer.all_of_dspace">Kogu TÜ DataDOI</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.full_text_search">Otsi sellest andmekogumist: </message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.head_browse">Sirvi:</message>
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.browse_titles">Pealkiri</message>
@@ -221,7 +231,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CommunityViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.search_scope">Otsingu ulatus</message>
-	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">Kogu TÜ DataHub</message>
+	<message key="xmlui.ArtifactBrowser.CommunityViewer.all_of_dspace">Kogu TÜ DataDOI</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.full_text_search">Otsi sellest valdkonnast ja andmekogumidest: </message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.head_browse">Sirvi</message>
 	<message key="xmlui.ArtifactBrowser.CommunityViewer.browse_titles">Pealkirjad</message>
@@ -272,7 +282,7 @@
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.Navigation.java -->
 	<message key="xmlui.ArtifactBrowser.Navigation.head_browse">Sirvi</message>
-	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Kogu DataHub </message>
+	<message key="xmlui.ArtifactBrowser.Navigation.head_all_of_dspace">Kogu DataDOI </message>
 	<message key="xmlui.ArtifactBrowser.Navigation.communities_and_collections">Valdkonnad ja andmekogumid</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_title">Pealkirjad</message>
 	<message key="xmlui.ArtifactBrowser.Navigation.browse_author">Autorid</message>
@@ -458,7 +468,7 @@
 	<!-- org.dspace.app.xmlui.eperson.CannotRegister.java -->
 	<message key="xmlui.EPerson.CannotRegister.title">Registreerimine ei ole saadaval</message>
 	<message key="xmlui.EPerson.CannotRegister.head">Registreerimine ei ole saadaval</message>
-	<message key="xmlui.EPerson.CannotRegister.para1"> DataHub'i ei ole võimalik registreeruda. Küsimuste korral võta ühendust <a href="../contact">lehekülje administraatoriga.</a></message>
+	<message key="xmlui.EPerson.CannotRegister.para1"> DataDOI'i ei ole võimalik registreeruda. Küsimuste korral võta ühendust <a href="../contact">lehekülje administraatoriga.</a></message>
 
 	<!-- org.dspace.app.xmlui.eperson.EditProfile.java -->
 	<message key="xmlui.EPerson.EditProfile.title_update">Uuenda profiili</message>
@@ -518,7 +528,7 @@
 	<!-- org.dspace.app.xmlui.eperson.PasswordLogin.java -->
 	<message key="xmlui.EPerson.PasswordLogin.title">Logi sisse</message>
 	<message key="xmlui.EPerson.PasswordLogin.trail">Logi sisse</message>
-	<message key="xmlui.EPerson.PasswordLogin.head1">Logi TÜ DataHub'i</message>
+	<message key="xmlui.EPerson.PasswordLogin.head1">Logi TÜ DataDOI'i</message>
 	<message key="xmlui.EPerson.PasswordLogin.email_address">E-post</message>
 	<message key="xmlui.EPerson.PasswordLogin.error_bad_login">Sisestatud e-posti aadressi ja/või salasõna ei kehti. </message>
 	<message key="xmlui.EPerson.PasswordLogin.password">Salasõna</message>
@@ -531,7 +541,7 @@
 	<!-- org.dspace.app.xmlui.eperson.LDAPLogin.java -->
 	<message key="xmlui.EPerson.LDAPLogin.title">Logi sisse</message>
 	<message key="xmlui.EPerson.LDAPLogin.trail">Logi sisse</message>
-	<message key="xmlui.EPerson.LDAPLogin.head1">Logi TÜ DataHub'i -
+	<message key="xmlui.EPerson.LDAPLogin.head1">Logi TÜ DataDOI'i -
 	ainult TÜ kasutajatele</message>
 	<message key="xmlui.EPerson.LDAPLogin.title">Logi sisse</message>
 	<message key="xmlui.EPerson.LDAPLogin.username">Kasutajanimi</message>
@@ -572,7 +582,7 @@
 	<!-- org.dspace.app.xmlui.eperson.RegistrationFinished.java -->
 	<message key="xmlui.EPerson.RegistrationFinished.title">Registreerimine on lõpetatud</message>
 	<message key="xmlui.EPerson.RegistrationFinished.head">Registreerimine on lõpetatud</message>
-	<message key="xmlui.EPerson.RegistrationFinished.para1">Oled registeeritud DataHub'i süsteemi kasutajaks. Uute nimetuste lisamise kohta teabe saamiseks telli püsiteavitus e-postile.</message>
+	<message key="xmlui.EPerson.RegistrationFinished.para1">Oled registeeritud DataDOI'i süsteemi kasutajaks. Uute nimetuste lisamise kohta teabe saamiseks telli püsiteavitus e-postile.</message>
 
 	<!-- org.dspace.app.xmlui.eperson.ResetPassword.java -->
 	<message key="xmlui.EPerson.ResetPassword.title">Lähtesta salasõna</message>
@@ -588,7 +598,7 @@
 	<!-- org.dspace.app.xmlui.eperson.StartForgotPassword.java -->
 	<message key="xmlui.EPerson.StartForgotPassword.title">Unustasid salasõna?</message>
 	<message key="xmlui.EPerson.StartForgotPassword.head">Unustasid salasõna?</message>
-	<message key="xmlui.EPerson.StartForgotPassword.para1">Sisesta TÜ DataHub'i registreerimisel kasutatud e-posti aadress. Edasised juhtnöörid saadetakse sellele e-posti aadressile.</message>
+	<message key="xmlui.EPerson.StartForgotPassword.para1">Sisesta TÜ DataDOI'i registreerimisel kasutatud e-posti aadress. Edasised juhtnöörid saadetakse sellele e-posti aadressile.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address">E-post</message>
 	<message key="xmlui.EPerson.StartForgotPassword.email_address_help">Sisesta registreerimisel kasutatud e-posti aadress.</message>
 	<message key="xmlui.EPerson.StartForgotPassword.error_not_found">E-posti aadressi ei leitud.</message>
@@ -629,8 +639,8 @@
 
 
 	<!-- general submission aspect messages -->
-	<message key="xmlui.Submission.general.mydspace_home">Minu  DataHub esileht</message>
-	<message key="xmlui.Submission.general.go_mydspace">Mine Minu  DataHub esilehele</message>
+	<message key="xmlui.Submission.general.mydspace_home">Minu  DataDOI esileht</message>
+	<message key="xmlui.Submission.general.go_mydspace">Mine Minu  DataDOI esilehele</message>
 	<message key="xmlui.Submission.general.submission.title">Nimetuse lisamine</message>
 	<message key="xmlui.Submission.general.submission.trail">Nimetuse lisamine</message>
 	<message key="xmlui.Submission.general.submission.head">Nimetuse lisamine</message>
@@ -923,7 +933,7 @@
 
 	<!-- org.dspace.app.xmlui.Submission.submit.LicenseStep -->
 	<message key="xmlui.Submission.submit.LicenseStep.head">Levitamise Litsents</message>
-	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Viimane samm:</strong> Selleks, et DataHub taastoodaks, tõlgiks ja jagaks sinu poolt lisatud nimetust üle maailma, nõustu järgmiste tingimustega. </message>
+	<message key="xmlui.Submission.submit.LicenseStep.info1"><strong>Viimane samm:</strong> Selleks, et DataDOI taastoodaks, tõlgiks ja jagaks sinu poolt lisatud nimetust üle maailma, nõustu järgmiste tingimustega. </message>
 	<message key="xmlui.Submission.submit.LicenseStep.info2">Vali standardse levitamise litsents "Valin litsentsi" ja vajuta "Lõpeta lisamine"</message>
 	<message key="xmlui.Submission.submit.LicenseStep.info3">Litsentsiga seotud küsimuste korral võta ühendust süsteemi administraatoritega.</message>
 	<message key="xmlui.Submission.submit.LicenseStep.decision_label">Levitamise litsents</message>
@@ -1313,7 +1323,7 @@
 	<!-- org.dspace.app.xmlui.administrative.registries.MetadatRegistryMain.java -->
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.title">Metaandmete register</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head1">Metaandmete register</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Metaandmete register säilitab nimekirja repositooriumis kättesaadavatest metaandmete väljadest. Väljad võivad olla jagatud mitme skeemi vahel. DataHub nõuab kvalifitseeritud Dublin Core skeemi. Dublin Core skeemi võib laiendada lisaväljadega või uute skeemide lisamisega registrisse.</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.para1">Metaandmete register säilitab nimekirja repositooriumis kättesaadavatest metaandmete väljadest. Väljad võivad olla jagatud mitme skeemi vahel. DataDOI nõuab kvalifitseeritud Dublin Core skeemi. Dublin Core skeemi võib laiendada lisaväljadega või uute skeemide lisamisega registrisse.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Nimeruum</message>
@@ -1831,7 +1841,7 @@
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.trail">Harvest</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.options_harvest">Sisu allikas</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.label_source">Sisu allikas</message>
-	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">See on TÜ DataHub'i standardandmekogum</message>
+	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_normal">See on TÜ DataDOI'i standardandmekogum</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.source_harvested">See andmekogum korjab oma sisu välisallikatest</message>
 	<message key="xmlui.administrative.collection.GeneralCollectionHarvestingForm.submit_save">Salvesta</message>
 
@@ -1964,7 +1974,7 @@
 	<message key="xmlui.administrative.ControlPanel.trail">Juhtpaneel</message>
 	<message key="xmlui.administrative.ControlPanel.head">Juhtpaneel</message>
 	<message key="xmlui.administrative.ControlPanel.option_java">Java Informatsioon</message>
-	<message key="xmlui.administrative.ControlPanel.option_dspace"> DataHub konfiguratsioon</message>
+	<message key="xmlui.administrative.ControlPanel.option_dspace"> DataDOI konfiguratsioon</message>
 	<message key="xmlui.administrative.ControlPanel.option_alerts">Süsteemi-ülesed häired</message>
 	<message key="xmlui.administrative.ControlPanel.hours">{0} t</message>
 	<message key="xmlui.administrative.ControlPanel.minutes">{0} m</message>
@@ -1989,11 +1999,11 @@
         <message key="xmlui.administrative.ControlPanel.cocoon_cache_clear">(Tühjenda vahemälu)</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_persistent_cache_size">Alaline vahemälu suurus ({0})</message>
         <message key="xmlui.administrative.ControlPanel.cocoon_transient_cache_size">Muutuv vahemälu suurus ({0})</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_head">DataHub sätted</message>
-	 <message key="xmlui.administrative.ControlPanel.dspace_version">DataHub versioon</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_dir">DataHub installeerimise kataloog</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_url">DataHub baas-URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DataHub Hostinimi</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_head">DataDOI sätted</message>
+	 <message key="xmlui.administrative.ControlPanel.dspace_version">DataDOI versioon</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_dir">DataDOI installeerimise kataloog</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_url">DataDOI baas-URL</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DataDOI Hostinimi</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_name">Lehekülje nimi</message>
 	<message key="xmlui.administrative.ControlPanel.db_name">Andmebaasi nimi</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Andmebaasi URL</message>
@@ -2166,7 +2176,7 @@
 			<span id="ds-footer-logo">&#160;</span>
 		</a>
 		<p>
-			Lehekülg kasutab Manakin'i, Texas A&amp;M Ülikooli Raamatukogude poolt loodud DataHub'i esiliidest  Liidest saab muuta, kasutades Manakin Aspects ja XSL-il toetuvaid teemasid. 
+			Lehekülg kasutab Manakin'i, Texas A&amp;M Ülikooli Raamatukogude poolt loodud DataDOI'i esiliidest  Liidest saab muuta, kasutades Manakin Aspects ja XSL-il toetuvaid teemasid. 
 			Rohkem infot aadressil
 			<a href="http://di.tamu.edu">http://di.tamu.edu</a> ja
 			<a href="http://dspace.org">http://dspace.org</a>
@@ -2175,13 +2185,13 @@
 	<message key="xmlui.dri2xhtml.structural.contact-link">Kontakt</message>
 	<message key="xmlui.dri2xhtml.structural.feedback-link">Tagasiside</message>
 
-	<message key="xmlui.dri2xhtml.structural.head-subtitle">DataHub/Manakin Repositoorium</message>
+	<message key="xmlui.dri2xhtml.structural.head-subtitle">DataDOI/Manakin Repositoorium</message>
 
 	<message key="xmlui.dri2xhtml.structural.profile">Profiil: </message>
 	<message key="xmlui.dri2xhtml.structural.logout">Logi välja</message>
 	<message key="xmlui.dri2xhtml.structural.login">Logi sisse</message>
 
-	<message key="xmlui.dri2xhtml.structural.search">Otsi DataHub</message>
+	<message key="xmlui.dri2xhtml.structural.search">Otsi DataDOI</message>
 	<message key="xmlui.dri2xhtml.structural.search-advanced">Liitotsing</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-community">Sellest valdkonnast</message>
 	<message key="xmlui.dri2xhtml.structural.search-in-collection">Sellest andmekogumist</message>
@@ -2201,7 +2211,7 @@
 	<message key="xmlui.dri2xhtml.METS-1.0.no-title">Pealkirjata</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.no-author">Tundmatu autor</message>
 	<message key="xmlui.dri2xhtml.METS-1.0.non-conformant">
-		See DataHub'i objekt ei vasta METS 1.0 profiili standardile ja seda ei saa esitada. 
+		See DataDOI'i objekt ei vasta METS 1.0 profiili standardile ja seda ei saa esitada. 
 		Võid ümber seadistada malli, mis tegeleb dri2xhtml vajaliku funktsiooni täitmisega 
 		või luua oma malli, 
 		mis sobib kõikide millise profiiliga, mida kasutad.
@@ -2252,8 +2262,8 @@
 	<!-- Internationalization elements specific to the Qualified Dublin Core metadata handler.
 		DS-METS-1.0-QDC.xsl -->
 	<message key="xmlui.dri2xhtml.METS-1.0.qdc-not-applicable">
-		Qualified Dublin Core (QDC) ei ole võimalik kasutatada DataHub'i valdkondades ja andmekogumides. 
-		QDC kasutamisel kasuta QDC konverterit DataHub'i nimetuste ja 
+		Qualified Dublin Core (QDC) ei ole võimalik kasutatada DataDOI'i valdkondades ja andmekogumides. 
+		QDC kasutamisel kasuta QDC konverterit DataDOI'i nimetuste ja 
 		DIM või MODS valdkondade ja andmekogumide töötlemiseks.
 	</message>
 
@@ -2363,7 +2373,7 @@
      - JavaScript (AJAX) that completes the lookup popup window.
      - So, positional parameters are @1@, @2@, etc.
     -->
-  <message key="xmlui.ChoiceLookupTransformer.title">DataHub. Väärtuse kontollimine</message>
+  <message key="xmlui.ChoiceLookupTransformer.title">DataDOI. Väärtuse kontollimine</message>
   <message key="xmlui.ChoiceLookupTransformer.accept">Kinnita</message>
   <message key="xmlui.ChoiceLookupTransformer.add">Lisa</message>
   <message key="xmlui.ChoiceLookupTransformer.cancel">Tühista</message>
@@ -2386,7 +2396,7 @@
   <message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Kohalik väärtus "@1@" (Puudub normkirje)</message>
   
   <!-- mobile theme -->
-  <message key="xmlui.mobile.home_mobile">DataHub mobiilile</message>
+  <message key="xmlui.mobile.home_mobile">DataDOI mobiilile</message>
   <message key="xmlui.mobile.search_all">Otsi kõikjal</message>
   <message key="xmlui.mobile.browse_all">Lehitse kõike</message>
   <message key="xmlui.mobile.browse_date">Aasta</message>

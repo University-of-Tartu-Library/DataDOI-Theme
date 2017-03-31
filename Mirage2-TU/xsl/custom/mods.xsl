@@ -79,8 +79,8 @@
                     <i class="fa fa-globe fa-5x fa-fw"></i>
                     <br/>
                     <p>
-                        <h4> Increased Visibility </h4>
-                        <p> Content on DataHub is indexed by Google Scholar, ETIS, and others, exposing your research to worldwide audience. </p>
+                        <h4> <i18n:text>xmlui.general.why_use.title1</i18n:text> </h4>
+                        <p> <i18n:text>xmlui.general.why_use.reason1</i18n:text> </p>
                     </p>
                 </div>
 
@@ -88,10 +88,9 @@
                     <img class="img-responsive center" src="{$theme-path}images/DOI_logo.svg" />
 
                     <p>
-                        <h4> Digital object identifier </h4>
+                        <h4> <i18n:text>xmlui.general.why_use.title2</i18n:text> </h4>
                         <p> 
-                            All DataHub publications are prvoided with a valid DOI by datacite (<a href="http://datacite.ee">http://datacite.ee</a>).
-                            This allows you to easily share any publication or dataset with anyone and to cite it in future publications.
+                            <i18n:text>xmlui.general.why_use.reason2</i18n:text>
                         </p>
                     </p>
                 </div>
@@ -100,9 +99,9 @@
                     <i class="fa fa-shield fa-5x fa-fw"></i>
                     <br/>
                     <p>
-                        <h4> Security </h4>
+                        <h4> <i18n:text>xmlui.general.why_use.title3</i18n:text> </h4>
                         <p> 
-                            The DataHub is an institutaional repository that guarantees secyrity and longevity of your data.
+                            <i18n:text>xmlui.general.why_use.reason3</i18n:text>
                         </p>
                     </p>
                 </div>

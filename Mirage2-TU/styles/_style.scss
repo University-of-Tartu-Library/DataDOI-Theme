@@ -306,7 +306,12 @@ div.col-xs-12.body-home {
 .navbar-toggle-home {
     display: block !important;
 }
-
+.artifact-abstract{
+  color: #777;
+}
+.artifact-info > span small{
+  color: #000;
+}
 
 /*@max : community browser image wrapper*/
 #aspect_artifactbrowser_CommunityBrowser_referenceSet_community-browser{
@@ -334,10 +339,11 @@ img.homepage-community-logo {
 }
 
 
-/*Item submission page*/
+/*Item submission page
 #aspect_submission_StepTransformer_field_dc_subject {
   width: 160px;
 }
+*/
 /* Front page discovery and statistics columns */
 
 /*@media (min-width: $screen-lg-min) {

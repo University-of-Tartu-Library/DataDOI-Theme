@@ -195,7 +195,7 @@ $("#endnoteCitation").on("click", downloadEndNote);
 
 
 // *******************************************************
-// ***********   EASY SUBMISSION   ***********************
+// ****   PRETTY COLLECTION SELECTION FOR SUBMISSION   ***
 // *******************************************************
 
 function treeToMenu(tree) {
@@ -262,4 +262,19 @@ if (submit_col_selector.length > 0) {
 
 
 
+// *******************************************************
+// ****   modify input forms    ***
+// *******************************************************
 
+//Make keyword field small
+$("#aspect_submission_StepTransformer_field_dc_subject").parent().attr("class", "col-xs-3");
+
+// disable add abstract button after the first click
+// $("button").find("[name=submit_dc_description_abstract_add]").on("click", function(e) {
+// 	$(this).prop("disabled", true);
+// })
+// change add keywords width
+// var abstract = $("label[for='aspect_submission_StepTransformer_field_dc_description_abstract']");
+// if (abstract.length > 0) {
+// 	if (abstract.parent().find)
+// }

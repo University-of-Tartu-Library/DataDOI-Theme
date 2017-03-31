@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE input-forms SYSTEM "input-forms.dtd">
+<!DOCTYPE input-forms >
 
 
 <input-forms>
@@ -15,6 +15,15 @@
 
  <form-map>
    <name-map collection-handle="default" form-name="traditional" />
+
+  <!-- Humaniora --> 
+   <name-map collection-handle="123456789/244" form-name="tuStandard" />
+   <name-map collection-handle="123456789/243" form-name="tuStandard" />
+   <name-map collection-handle="123456789/242" form-name="tuStandard" />
+   <name-map collection-handle="123456789/240" form-name="tuStandard" />
+   <name-map collection-handle="123456789/239" form-name="tuStandard" />
+   <name-map collection-handle="123456789/238" form-name="tuStandard" />
+
  </form-map>
 
 
@@ -36,186 +45,7 @@
 
  <form-definitions>
 
-   <form name="traditional">
-     <page number="1">
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>contributor</dc-element>
-         <dc-qualifier>author</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Authors</label>
-         <input-type>name</input-type>
-         <hint>Enter the names of the authors of this item.</hint>
-         <required>You must enter at least one author (can be anonymous).</required>
-       </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>title</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Title</label>
-         <input-type>onebox</input-type>
-         <hint>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.</hint>
-         <required>You must enter a main title for this item.</required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>abstract</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Abstract</label>
-         <input-type>textarea</input-type>
-         <hint>Enter the abstract of the item. </hint>
-         <required></required>
-       </field>
-
-<!--        <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>title</dc-element>
-         <dc-qualifier>alternative</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Other Titles</label>
-         <input-type>onebox</input-type>
-         <hint>If the item has any alternative titles, please enter them here.</hint>
-         <required></required>
-       </field>
- -->
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>issued</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Date of Issue</label>
-         <input-type>date</input-type>
-         <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required>You must enter at least the year.</required>
-       </field>
-
-        <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>subject</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <!-- An input-type of twobox MUST be marked as repeatable -->
-         <repeatable>true</repeatable>
-         <label>Keywords </label>
-         <input-type>twobox</input-type>
-         <hint>Enter 3-8 keywords that describe your work. </hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>type</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Type</label>
-         <input-type value-pairs-name="common_types">dropdown</input-type>
-         <hint>Select the type(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>relation</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Relation</label>
-         <input-type>onebox</input-type>
-         <hint>A citation/DOI of work related to this submission.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Comment</label>
-         <input-type>onebox</input-type>
-         <hint>Enter any other description or comments in this box. </hint>
-         <required></required>
-       </field>
-
-
-      </page>
-     </form>
-
-<!--        <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>publisher</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Publisher</label>
-         <input-type>onebox</input-type>
-         <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
-         <required></required>
-       </field>
-
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>relation</dc-element>
-         <dc-qualifier>ispartofseries</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Series/Report No.</label>
-         <input-type>series</input-type>
-         <hint>Enter the series and number assigned to this item by your community.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>identifier</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Identifiers</label>
-         <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-         <hint>If the item has any identification numbers or codes associated with
-it, please enter the types and the actual numbers or codes.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>language</dc-element>
-         <dc-qualifier>iso</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Language</label>
-         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-         <hint>Select the language of the main content of the item.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
-         <required></required>
-       </field>
-     </page>
- -->
-
-
-<!-- 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>sponsorship</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Sponsors</label>
-         <input-type>textarea</input-type>
-         <hint>Enter the names of any sponsors and/or funding codes in the box. </hint>
-         <required></required>
-       </field>
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Description</label>
-         <input-type>textarea</input-type>
-         <hint>Enter any other description or comments in this box. </hint>
-         <required></required>
-       </field>
-     </page>
- -->
 
    <form name="one">
      <page number="1">
@@ -231,7 +61,106 @@ it, please enter the types and the actual numbers or codes.</hint>
        </field>
       </page>
     </form>
+
+<!-- Default TU input form -->
+
+   <form name="tuStandard">
+     <page number="1">
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>contributor</dc-element>
+         <dc-qualifier>author</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Autorid</label>
+         <input-type>name</input-type>
+         <hint>Sisesta autorite nimed.</hint>
+         <required>You must enter at least one author (can be anonymous).</required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Pealkiri</label>
+         <input-type>onebox</input-type>
+         <hint>Sisesta sisendi pealkiri.</hint>
+         <required>You must enter a main title for this item.</required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier>abstract</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Abstrakt</label>
+         <input-type>textarea</input-type>
+         <hint>Sisesta sisesndi abstrakt. </hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issued</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Väljastamise kuupäev</label>
+         <input-type>date</input-type>
+         <hint>Sisesta publitseerimise kuupäeva. Võite jätta välja päev ja / või kuu, kui nad ei ole
+                         kohaldatavad.</hint>
+         <required>You must enter at least the year.</required>
+       </field>
+
+        <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>subject</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Märksõnad </label>
+         <input-type>twobox</input-type>
+         <hint>Sisesta 3-8 märksõnu mis kirjeladavad teie töö. </hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>type</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Tüüp</label>
+         <input-type value-pairs-name="common_types">dropdown</input-type>
+         <hint>Vali sisendi tüüp (tüübid). Et valida rohkem kui üks väärtus nimekirjast hoia "CTRL" või "Shift" klahvi.</hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Seosed</label>
+         <input-type>onebox</input-type>
+         <hint>Seotud publikatsioonide tsitaadid või DOId.</hint>
+         <required></required>
+       </field>
+
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>description</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Kirjeldus</label>
+         <input-type>onebox</input-type>
+         <hint>Sisesta muu kirjeldus või kommentaare selle kasti. </hint>
+         <required></required>
+       </field>
+
+
+      </page>
+     </form>
  </form-definitions>
+
+
 
 
  <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
