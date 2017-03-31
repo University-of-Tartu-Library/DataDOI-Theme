@@ -34,7 +34,7 @@
 	<message key="xmlui.general.why_use.title2">Digital object identifier</message>
 	<message key="xmlui.general.why_use.title3">Turvalisus</message>
 	<message key="xmlui.general.why_use.reason1">DataDOI indekseerivad Google Scholar, Google ja teised, paljastades sinu uurimistööd ülemaailma. </message>
-	<message key="xmlui.general.why_use.reason2">Kõik DataDOI kirjad omavad kehtivad DOI DataCite'st <a href="http://datacite.ee">(http://datacite.ee)</a>. See võimaldab lihtsasti jagada publekatsioonid või andmekogumid teistega ja tsiteerida neid tulevikus.</message>
+	<message key="xmlui.general.why_use.reason2">Kõigil DataDOI kirjetel on DOI, mis on saadud DataCite Eesti kaudu <a href="http://datacite.ee">(http://datacite.ee)</a>. See võimaldab lihtsalt jagada publikatsioone või andmekogumeid teistega ja tsiteerida neid tulevikus.</message>
 	<message key="xmlui.general.why_use.reason3">DataDOI on Tartu Ülikooli repositoorium, mis tagab turvalisust ja pikaealisust teile andmetele.</message>
 
 	<message key="xmlui.item_view.item_type">Kirje tüüp</message>

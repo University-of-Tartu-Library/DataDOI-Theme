@@ -388,7 +388,7 @@
                              <a href="https://ut.ee" class="navbar-brand hidden-xs">
                                 <img class="img-responsive" src="{$theme-path}/images/logo_circle.png" />
                             </a>
-                            <a href="{$context-path}" id="repository-name">
+                            <a href="/" id="repository-name">
                                 <span id="hub-title">
                                     DataDOI
                                 </span>
@@ -1157,7 +1157,7 @@
                     </div>
                     <div id="hub-search-row" class="row">
                         <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-3 col-md-6" id="hub-search-input-group">
-                            <form id="hub-search-form" method="post" action="/xmlui/discover">
+                            <form id="hub-search-form" method="post" action="/discover">
                                 <div class="input-group input-group-lg" id="hub-search-input">
                                     <input placeholder="xmlui.dri2xhtml.structural.search" i18n:attr="placeholder" class="form-control" name="query" type="text"/>
                                     <span class="input-group-btn">
@@ -1170,7 +1170,7 @@
                     <div id="deposit-row" class="row">
                         <!-- <div class="col-xs-6 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 col-sm-4 col-md-2"> -->
                         <div>
-                            <a href="/xmlui/submit" role="button" class="btn btn-primary btn-lg"><i18n:text>xmlui.general.submit_dataset</i18n:text></a>
+                            <a href="/submit" role="button" class="btn btn-primary btn-lg"><i18n:text>xmlui.general.submit_dataset</i18n:text></a>
                         </div>
                     </div>
                 </div>

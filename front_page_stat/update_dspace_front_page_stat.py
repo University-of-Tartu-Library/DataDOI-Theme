@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 import requests
 import sys
 from xml.etree import ElementTree as ET
 
-solr_query_string = "http://localhost:8080/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fq=time:[NOW-7DAY%20TO%20NOW]&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=5"
+solr_query_string = "http://localhost:80/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fq=time:[NOW-7DAY%20TO%20NOW]&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=5"
 
 # try getting last 7 days most accessed items
 try:
@@ -15,7 +15,7 @@ except requests.exceptions.RequestException as e:  # This is the correct syntax
 
 def uid_to_handle(uid):
 	""" query solr to get item handle"""
-	query  = "http://localhost:8080/solr/search/select?q=search.resourcetype:2+AND+search.resourceid:{}&fl=handle&omitHeader=true&json=true"
+	query  = "http://localhost:80/solr/search/select?q=search.resourcetype:2+AND+search.resourceid:{}&fl=handle&omitHeader=true&json=true"
 	resp = requests.get(query.format(uid))
 	tree = ET.fromstring(resp.content)
 	try:
@@ -58,6 +58,5 @@ for uid, accesses in popular_items:
 
 # write tree
 with open("/var/cache/tomcat/pops.xml", 'w') as f:
-	f.write(ET.tostring(root, encoding="unicode"))
-
+	f.write(ET.tostring(root, encoding="utf-8"))
 

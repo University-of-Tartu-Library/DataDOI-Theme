@@ -62,7 +62,7 @@
             <div class="homepage-discovery-column most-viewed-column col-sm-12  col-md-6">
                 <h2 class="ds-div-head page-header"><i18n:text>xmlui.general.most_viewed</i18n:text></h2>
                 <div>
-                    <xsl:apply-templates select="document('http://localhost:8080/static/pops.xml')/dri:document/dri:referenceSet" />
+                    <xsl:apply-templates select="document('http://localhost:80/static/pops.xml')/dri:document/dri:referenceSet" />
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
     <!-- Front page about text -->
     <xsl:template name="aboutText">
         <div id="features">
-            <h2 class="ds-div-head page-header"> Why use it? </h2>
+            <h2 class="ds-div-head page-header"> <i18n:text>xmlui.general.why_use</i18n:text> </h2>
 
             <div class="row" id="feature-container">
 
