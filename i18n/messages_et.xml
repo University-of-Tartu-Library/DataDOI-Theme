@@ -25,7 +25,7 @@
 
 	<!-- @max : custom mesages -->
 	<message key="xmlui.general.frontpage_welcome_header">Tartu Ülikooli DataDOI</message>
-	<message key="xmlui.general.frontpage_welcome_message">DataDOI on avatud repositoorium Tartu Ülikooli teadusandmete publitseerimise jaoks</message>
+	<message key="xmlui.general.frontpage_welcome_message">DataDOI on Tartu Ülikooli avatud repositoorium teadusandmete publitseerimiseks</message>
 	<message key="xmlui.ArtifactBrowser.SiteViewer.head_recent_submissions">Uued</message>
 
 	<message key="xmlui.general.most_viewed">Enim vaadatud viimase 7 päevaga</message>
