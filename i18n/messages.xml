@@ -37,6 +37,13 @@
 	<message key="xmlui.general.why_use.reason2">All DataDOI publications are provided with a valid DOI by DataCite Eesti <a href="http://datacite.ut.ee">(http://datacite.ee)</a>. This allows you to easily share any publication or dataset with anyone and to cite it in the future publications.</message>
 	<message key="xmlui.general.why_use.reason3">The DataDOI is the University of Tartu repository that guarantees security and longevity of your data.</message>
 
+	<message key="xmlui.general.uses">Primary data types</message>
+	<message key="xmlui.general.uses.dataset">Datasets</message>
+	<message key="xmlui.general.uses.article">Articles with supporting information</message>
+	<message key="xmlui.general.uses.present">Presentations and posters</message>
+	<message key="xmlui.general.uses.figure">Figures</message>
+	<message key="xmlui.general.uses.code">Code</message>
+
 
 	<message key="xmlui.item_view.item_type">Item type</message>
 	<message key="xmlui.item_view.show_more">Show more</message>

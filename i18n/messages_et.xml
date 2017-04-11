@@ -47,6 +47,13 @@
 	
 	<message key="xmlui.dri2xhtml.METS-1.0.item-citation-bibtex">Export to BibTex</message>
 
+	<message key="xmlui.general.uses">Peamised andmetüübid</message>
+	<message key="xmlui.general.uses.dataset">Andmekogud</message>
+	<message key="xmlui.general.uses.article">Artiklid koos lisa materjalidega</message>
+	<message key="xmlui.general.uses.present">Presentatsioonid ja posterid</message>
+	<message key="xmlui.general.uses.figure">Joonised</message>
+	<message key="xmlui.general.uses.code">Kood</message>
+
 
  
 	<!-- General keys -->

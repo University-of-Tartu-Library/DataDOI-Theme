@@ -11,6 +11,18 @@
  * It will be included in all color schemes
  */
 
+/*Global settings*/
+body {
+  font-size: 16px;
+}
+h5 {
+  font-size: 16px;
+}
+h4 {
+  font-size: 18px;
+}
+
+
 
 /* @max : Header branding and trail appearance*/
 
@@ -290,9 +302,20 @@ span.statistics-views {
   text-align: center;
 }
 #feature-container {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
+/*Uses*/
+#uses-descriptions {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+#uses-descriptions .use-description {
+  text-align: center;
+}
+
 
 
 /*@max : Main page body */
@@ -300,18 +323,20 @@ span.statistics-views {
 #main-container .row-offcanvas-home {
     background-color: #FFF;
 }
-div.col-xs-12.body-home {
-  margin-top: 30px;
+.body-home h2 {
+  margin-top: 40px;
 }
 .navbar-toggle-home {
     display: block !important;
 }
-.artifact-abstract{
+/*.artifact-abstract{
   color: #777;
 }
-.artifact-info > span small{
+*//*.artifact-info > span small{
   color: #000;
-}
+}*/
+
+
 
 /*@max : community browser image wrapper*/
 #aspect_artifactbrowser_CommunityBrowser_referenceSet_community-browser{

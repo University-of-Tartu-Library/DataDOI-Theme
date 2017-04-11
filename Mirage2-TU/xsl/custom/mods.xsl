@@ -109,16 +109,52 @@
 
             </div>
 
-<!--             <div class="col-xs-12 col-sm-6">
-                <i class="fa fa-bullhorn fa-4x fa-pull-left fa-fw"></i>
-                <h4> Increased Visibility </h4>
-                <p> Content on DataHub is indexed by Google Scholar, ETIS, and others, exposing your research to worldwide audience. </p>
-            </div>
- -->
-
-
-
         </div>
+
+        <div id="uses">
+            <h2 class="ds-div-head page-header"> <i18n:text>xmlui.general.uses</i18n:text> </h2>
+
+            <div class="row" id="uses-descriptions">
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-5ths">
+                    <img class="img-responsive center-block" src="{$theme-path}images/zip.svg" />
+                    <div class="use-description">
+                        <h4><i18n:text>xmlui.general.uses.dataset</i18n:text></h4>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-5ths">
+                    <img class="img-responsive center-block" src="{$theme-path}images/files.svg" />
+                    <div class="use-description">
+                        <h4><i18n:text>xmlui.general.uses.article</i18n:text></h4>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-5ths">
+                    <img class="img-responsive center-block" src="{$theme-path}images/poster.svg" />
+                    <div class="use-description">
+                        <h4><i18n:text>xmlui.general.uses.present</i18n:text></h4>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-5ths use-description">
+                    <img class="img-responsive center-block" src="{$theme-path}images/chart.svg" />
+                    <div>
+                        <h4><i18n:text>xmlui.general.uses.figure</i18n:text></h4>
+                    </div>
+                </div>
+
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-5ths">
+                    <img class="img-responsive center-block" src="{$theme-path}images/code.svg" />
+                    <div class="use-description">
+                        <h4><i18n:text>xmlui.general.uses.code</i18n:text></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
     </xsl:template>
 
 
