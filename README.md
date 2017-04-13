@@ -26,4 +26,7 @@ In case citations are not being generated due to CORS problems you should add th
 ```
 
 
+**File Icons**
+
+File icons were designed by CreativeTail (https://www.creativetail.com/free-file-types-icons/)
 
