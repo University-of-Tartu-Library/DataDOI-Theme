@@ -32,6 +32,8 @@ Temporary Items
 # Node
 node_modules/
 .tmp/
+bower_components/
+package-lock.json
 
 #GA
 test-dspace.p12
