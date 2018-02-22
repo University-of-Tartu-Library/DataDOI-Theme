@@ -157,17 +157,6 @@
 
     </xsl:template>
 
-
-
-    <xsl:template match="dri:div[@id='aspect.submission.submit.SelectCollectionStep.field.submit']">
-        <xsl:apply-templates/>
-        <div class="row">
-            This is my text and it is amazing!
-        </div>
-    </xsl:template>
-
-
-
 <!-- Customiza front page discovery. Abondoned.
     <xsl:template match="dri:div[@id='aspect.discovery.SiteRecentSubmissions.div.site-home']">
         <div class="row">

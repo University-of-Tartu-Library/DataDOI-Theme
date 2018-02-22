@@ -1,14 +1,14 @@
 // *******************************************************
 // *********** SHOW MORE/SHOW LESS ***********************
 // *******************************************************
-$(document).ready(function() {
-	$(".morelink").click(function(){
+$(document).ready(function () {
+	$(".morelink").click(function () {
 		$(this).parent().toggle();         //self
 		$(this).parent().prev().toggle();  //text
 		$(this).parent().next().toggle();  //less
 		return false;
 	});
-	$(".lesslink").click(function(){
+	$(".lesslink").click(function () {
 		$(this).parent().toggle();                //self
 		$(this).parent().prev().toggle();         //more
 		$(this).parent().prev().prev().toggle();  //text
@@ -23,28 +23,28 @@ $(document).ready(function() {
 
 //save to disk
 function createDownloadText(filename, data) {
-    var blob = new Blob([data], {type: 'text/plain'});
-    if(window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveBlob(blob, filename);
-    }
-    else{
-        var elem = window.document.createElement('a');
-        elem.href = window.URL.createObjectURL(blob);
-        elem.download = filename;        
-        document.body.appendChild(elem);
-        elem.click();        
-        document.body.removeChild(elem);
-    }
+	var blob = new Blob([data], { type: 'text/plain' });
+	if (window.navigator.msSaveOrOpenBlob) {
+		window.navigator.msSaveBlob(blob, filename);
+	}
+	else {
+		var elem = window.document.createElement('a');
+		elem.href = window.URL.createObjectURL(blob);
+		elem.download = filename;
+		document.body.appendChild(elem);
+		elem.click();
+		document.body.removeChild(elem);
+	}
 }
 
 //endnote citation generator
-function toEndNote(dcArray){
+function toEndNote(dcArray) {
 
 	var citation = "TY  - GEN\n";
 
-	for (i=0; i < dcArray.length; ++i) {
+	for (i = 0; i < dcArray.length; ++i) {
 		dcData = dcArray[i];
-		switch(dcData.key) {
+		switch (dcData.key) {
 			case "dc.contributor.author":
 				citation += 'AU  - ' + dcData.value + '\n';
 				break;
@@ -79,7 +79,7 @@ function toEndNote(dcArray){
 
 
 //bibtex citation generator
-function toBibTex(dcArray, handle){
+function toBibTex(dcArray, handle) {
 	var i, dcData;
 	//replace forward slashes just in case
 	var citation = "<pre>\n@misc{" + handle.replace("/", "_") + ",\n";
@@ -87,9 +87,9 @@ function toBibTex(dcArray, handle){
 	var authors = [];
 	var notes = [];
 
-	for (i=0; i < dcArray.length; ++i) {
+	for (i = 0; i < dcArray.length; ++i) {
 		dcData = dcArray[i];
-		switch(dcData.key) {
+		switch (dcData.key) {
 			case "dc.contributor.author":
 				authors.push(dcData.value);
 				break;
@@ -128,7 +128,7 @@ function toBibTex(dcArray, handle){
 
 
 // display bibtex
-function displayBibTex(){
+function displayBibTex() {
 	//URL of dspace rest server
 	var REST_SERVER = "/rest";
 	var path = window.location.pathname;
@@ -139,12 +139,12 @@ function displayBibTex(){
 	}
 	$.ajax(REST_SERVER + handle,
 		{
-			success: function(handleData) {
+			success: function (handleData) {
 				if (handleData.hasOwnProperty('link')) {
 					var metadataLink = handleData.link + '/metadata';
 					$.ajax(metadataLink,
 						{
-							success: function(linkData){
+							success: function (linkData) {
 								var bibtex = toBibTex(linkData, handle);
 								console.log(bibtex);
 								$("#bibtex_content").html(bibtex);
@@ -159,7 +159,7 @@ function displayBibTex(){
 }
 
 // display bibtex
-function downloadEndNote(){
+function downloadEndNote() {
 	//URL of dspace rest server
 	var REST_SERVER = "/rest";
 	var path = window.location.pathname;
@@ -170,12 +170,12 @@ function downloadEndNote(){
 	}
 	$.ajax(REST_SERVER + handle,
 		{
-			success: function(handleData) {
+			success: function (handleData) {
 				if (handleData.hasOwnProperty('link')) {
 					var metadataLink = handleData.link + '/metadata';
 					$.ajax(metadataLink,
 						{
-							success: function(linkData){
+							success: function (linkData) {
 								var endnote = toEndNote(linkData);
 								console.log(endnote);
 								createDownloadText("citation" + handle.replace("/", "_") + ".ris", endnote)
@@ -210,7 +210,7 @@ function treeToMenu(tree) {
 		var leafs = "<div class='leafs'>"
 		var keys = Object.keys(tree);
 		var key;
-		for (var i=0; i < keys.length; i++) {
+		for (var i = 0; i < keys.length; i++) {
 			key = keys[i];
 			if ((key !== "name") && (key !== "value")) {
 				leafs += treeToMenu(tree[key]);
@@ -224,7 +224,7 @@ var submit_col_selector = $("#aspect_submission_submit_SelectCollectionStep_fiel
 if (submit_col_selector.length > 0) {
 	var optgroup = null;
 	var option_html;
-	submit_col_selector.children("option").each(function() {
+	submit_col_selector.children("option").each(function () {
 		//if this is a regular option, place into group...
 		if (this.value) {
 
@@ -236,7 +236,7 @@ if (submit_col_selector.length > 0) {
 			var rest = levels.slice(1).join(' > ');
 			console.log(cur_group);
 			console.log(rest);
-		
+
 			if (!optgroup || cur_group !== optgroup.attr("label")) {
 				$(this).parent().append(optgroup);
 				//new optgroup
@@ -255,8 +255,13 @@ if (submit_col_selector.length > 0) {
 	// add last optgroup
 	submit_col_selector.append(optgroup);
 
-	// and finally prettify
+	// and prettify
 	submit_col_selector.select2();
+
+	// in addition, add video using embedding code from youtube
+	var video_embed = '<iframe width="560" height="315" src="https://www.youtube.com/embed/AzQ_Lca1KPg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+	var embedded_div = $("<div>").html(video_embed).css('text-align', 'center');
+	submit_col_selector.next().next().append(embedded_div);
 
 }
 
