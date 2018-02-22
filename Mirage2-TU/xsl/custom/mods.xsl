@@ -159,6 +159,12 @@
 
 
 
+    <xsl:template match="dri:div[@id='aspect.submission.submit.SelectCollectionStep.field.submit']">
+        <xsl:apply-templates/>
+        <div class="row">
+            This is my text and it is amazing!
+        </div>
+    </xsl:template>
 
 
 
