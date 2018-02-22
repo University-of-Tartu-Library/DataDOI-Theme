@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<import_structure>
+	<community>
+		<name>Humaniora</name>
+		<description>HV/Humanitaarteaduste ja kunstide valdkond/Faculty of arts and humanities</description>
+		<collection>
+			<name>Ajaloo ja arheoloogia instituut</name>
+		</collection>
+		<collection>
+			<name>Eesti ja üldkeeleteaduse instituut</name>
+		</collection>
+		<collection>
+			<name>Filosoofia ja semiootika instituut</name>
+		</collection>
+		<collection>
+			<name>Kultuuriteaduste ja kunstide instituut</name>
+		</collection>
+		<collection>
+			<name>Usuteaduskond</name>
+		</collection>
+		<collection>
+			<name>Maailma keelte ja kultuuride kolledž</name>
+		</collection>
+		<collection>
+			<name>Viljandi kultuuriakadeemia</name>
+		</collection>
+	</community>
+	<community>
+		<name>Socialia</name>
+		<description>SV/Sotsiaalteaduste valdkond/Faculty of social sciences</description>
+		<collection>
+			<name>Haridusteaduste instituut</name>
+		</collection>
+		<collection>
+			<name>Johan skytte poliitikauuringute instituut</name>
+		</collection>
+		<collection>
+			<name>Majandusteaduskond</name>
+		</collection>
+		<collection>
+			<name>Psühholoogia instituut</name>
+		</collection>
+		<collection>
+			<name>Õigusteaduskond</name>
+		</collection>
+		<collection>
+			<name>Ühiskonnateaduste instituut</name>
+		</collection>
+		<collection>
+			<name>Narva kolledž</name>
+		</collection>
+		<collection>
+			<name>Pärnu kolledž</name>
+		</collection>
+	</community>
+	<community>
+		<name>Medicina</name>
+		<description>MV/Meditsiiniteaduste valdkond/Faculty of medicine</description>
+		<collection>
+			<name>Bio- ja siirdemeditsiini instituut</name>
+		</collection>
+		<collection>
+			<name>Farmaatsia instituut</name>
+		</collection>
+		<collection>
+			<name>Hambaarstiteaduse instituut</name>
+		</collection>
+		<collection>
+			<name>Kliinilise meditsiini instituut</name>
+		</collection>
+		<collection>
+			<name>Peremeditsiini ja rahvatervsihoiu instituut</name>
+		</collection>
+		<collection>
+			<name>Sporditeaduste ja füsioteraapia instituut</name>
+		</collection>
+	</community>
+	<community>
+        <name>Realia</name>
+		<description>LT/Loodus- ja täppisteaduste valdkond/Faculty of science and technology</description>
+		<collection>
+			<name>Arvutiteaduse instituut</name>
+		</collection>
+		<collection>
+			<name>Eesti mereinstituut</name>
+		</collection>
+		<collection>
+			<name>Füüsika instituut</name>
+		</collection>
+		<collection>
+			<name>Keemia instituut</name>
+		</collection>
+		<collection>
+			<name>Matemaatika ja statistika instituut</name>
+		</collection>
+		<collection>
+			<name>Molekulaar- ja rakubioloogia instituut</name>
+		</collection>
+		<collection>
+			<name>Tehnoloogiainstituut</name>
+		</collection>
+		<collection>
+			<name>Ökoloogia ja maateaduse instituut</name>
+		</collection>
+	</community>
+	<community>
+        <name>Teised/Others</name>
+		<description>nan/Valdkonnavälised asutused/Non-faculty institutions</description>
+		<collection>
+			<name>Tü eesti geenivaramu</name>
+		</collection>
+		<collection>
+			<name>Tü raamatukogu</name>
+		</collection>
+		<collection>
+			<name>Tü muuseum</name>
+		</collection>
+		<collection>
+			<name>Tü loodusmuuseum ja botaanikaaed</name>
+		</collection>
+		<collection>
+			<name>Teaduskool</name>
+		</collection>
+	</community>
+</import_structure>
