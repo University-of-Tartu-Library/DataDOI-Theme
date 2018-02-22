@@ -260,7 +260,7 @@ if (submit_col_selector.length > 0) {
 
 	// in addition, add video using embedding code from youtube
 	var $form = $("#aspect_submission_submit_SelectCollectionStep_div_select-collection")
-	$form.append("<p class='help-block'>Andmete üleslaadimise juhend (in estonian):</p>")
+	$form.append("<p class='help-block'>Andmete laadimise juhend (in estonian):</p>")
 	var video_embed = '<iframe width="560" height="315" src="https://www.youtube.com/embed/AzQ_Lca1KPg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 	var embedded_div = $("<div>").html(video_embed).css('text-align', 'center');
 	$form.append(embedded_div);
