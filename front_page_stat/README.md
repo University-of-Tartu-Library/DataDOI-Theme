@@ -1,3 +1,9 @@
+# Dspace statisics generation
+
+Run the python script with crontab to create a file with dspace views statistics.
+
+## Setting up tomcat for serving static files
+
 This python script creates a file with the most viewed items that can be served by any web server. If you want to serve it with you will need to (Ref. http://www.moreofless.co.uk/static-content-web-pages-images-tomcat-outside-war):
 
 
@@ -17,7 +23,7 @@ This python script creates a file with the most viewed items that can be served 
 
 
 
-# Various Exmaples of dspace Solr:
+## Various Exmaples of dspace Solr:
 
 **top 5 views**
 http://localhost:8080/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=5
