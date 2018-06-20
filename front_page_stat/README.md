@@ -1,13 +1,13 @@
 # Dspace statisics generation
 
-Run the python script with crontab to create a file with dspace views statistics.
+Run the python script periodically with crontab to create and update a file with dspace item views statistics.
 
-## Setting up tomcat for serving static files
+### Setting up tomcat to serve static files
 
-This python script creates a file with the most viewed items that can be served by any web server. If you want to serve it with you will need to (Ref. http://www.moreofless.co.uk/static-content-web-pages-images-tomcat-outside-war):
+If you want to serve statistics file with Tomcat you will need to (Ref. http://www.moreofless.co.uk/static-content-web-pages-images-tomcat-outside-war):
 
 
-1. Add the following row to `tomcat/conf/server.xml`
+1. Add the following line to `tomcat/conf/server.xml`
 
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
@@ -23,15 +23,15 @@ This python script creates a file with the most viewed items that can be served 
 
 
 
-## Various Exmaples of dspace Solr:
+### Exmaples of dspace Solr queries:
 
 **top 5 views**
 http://localhost:8080/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=5
 
-**Last 7 days item views**
+**last 7 days item views**
 http://localhost:8080/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fq=time:[NOW-7DAY%20TO%20NOW]
 
-**Top 5 views from last 7 days**
+**top 5 views from last 7 days**
 http://localhost:8080/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fq=time:[NOW-7DAY%20TO%20NOW]&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=5
 
 **all items**
