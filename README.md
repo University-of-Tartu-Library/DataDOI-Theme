@@ -1,29 +1,15 @@
 # University of Tartu Mirage 2 theme
 
 
-**Citation**
+## Installation
 
-In case citations are not being generated due to CORS problems you should add the following filter to your tomcat web.xml settings ([tomcat]/conf/web.xml):
+1. Install Dspace 6.x normally
+2. Place `Mirage2-TU` directory into `webapps/xmlui/themes` directory (located either inside Tomcat or dspace roots)
+3. The directory with additional strings and their translations, `i18n` should replace `webapps/xmlui/i18n`.
+4. Set up and run a script to periodically update dspace items views statistic (instructions are in `front_page_stat` directory)
+5. Replace the `[dspace]/config/news-xmlui.xml` with the provided `news-xmlui.xml` file.
+6. Finally, configure dspace in the `local.cfg` file. An example of a basic configuration is provided in the `local.cfg` folder in this repository; a more detailed explanation can be found in the official installation instruction.
 
-
-```xml
- <filter>
-     <filter-name>CorsFilter</filter-name>
-     <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-     <init-param>
-         <param-name>cors.allowed.origins</param-name>
-         <param-value>http://datadoi.ut.ee</param-value>
-     </init-param>
-     <init-param>
-       <param-name>cors.allowed.methods</param-name>
-       <param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
-     </init-param>
- </filter>
- <filter-mapping>
-   <filter-name>CorsFilter</filter-name>
-   <url-pattern>/*</url-pattern>
- </filter-mapping>
-```
 
 
 **File Icons**
