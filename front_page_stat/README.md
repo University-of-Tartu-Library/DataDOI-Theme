@@ -2,7 +2,7 @@
 
 Run python 2 script `update_dspace_front_page_stat.py` periodically with crontab to create and update a file with dspace item views statistics.
 
-By default script places statistics file into `/var/cache/tomcat/pops.xml` (this location be changed inside the script). The script is then served by any webserver at `/static/pops.xml` (e.g.: http://datadoi.ut.ee/static/pops.xml). Finally, `Mirage2-TU` theme uses xslt to parse the contents of this file and display it on the Dspace landing page.
+By default script places statistics file into `/var/cache/tomcat/pops.xml` (this location be changed inside the script). This xml file is then served by any web server at `/static/pops.xml` (e.g.: http://datadoi.ut.ee/static/pops.xml). Finally, `Mirage2-TU` theme uses xslt to parse the contents of this file and display it on the Dspace landing page.
 
 ### Setting up tomcat to serve static files
 
