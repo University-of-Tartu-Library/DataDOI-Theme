@@ -3,6 +3,7 @@ import requests
 import sys
 from xml.etree import ElementTree as ET
 
+statistics_file_location = "/var/cache/tomcat/pops.xml"
 solr_query_string = "http://localhost:80/solr/statistics/select?q=type:2&fq=statistics_type:view&fq=-isBot:true&fq=time:[NOW-7DAY%20TO%20NOW]&fl=uid+score+&df=id&indent=true&facet=true&facet.field=id&omitHeader=true&f.id.facet.limit=50"
 
 # try getting last 7 days most accessed items
@@ -64,6 +65,6 @@ for handle, accesses in popular_items:
 	ref.attrib["views"] = accesses
 
 # write tree
-with open("/var/cache/tomcat/pops.xml", 'w') as f:
+with open(statistics_file_location, 'w') as f:
 	f.write(ET.tostring(root, encoding="utf-8"))
 
