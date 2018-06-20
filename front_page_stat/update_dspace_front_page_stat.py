@@ -8,7 +8,7 @@ solr_query_string = "http://localhost:80/solr/statistics/select?q=type:2&fq=stat
 
 # try getting last 7 days most accessed items
 try:
-	resp = requests.get(solr_query_string)
+    resp = requests.get(solr_query_string)
 except requests.exceptions.RequestException as e:  # This is the correct syntax
     print(e)
     sys.exit(1)
@@ -22,9 +22,9 @@ def uid_to_handle(uid):
 	try:
 		return tree.find(".//str").text
 	except AttributeError:
-                print('Couldnt find corresponding handle for uid={}!'.format(uid))
+        print('Couldnt find corresponding handle for uid={}!'.format(uid))
 		#print(ET.dump(tree))
-                return None
+        return None
 		
 
 # parse tree and find relevant items
@@ -33,14 +33,14 @@ tree = ET.fromstring(resp.content)
 popular_items = []  # contains handles and number of views
 for item in tree.iter("int"):
 	uid = item.get("name")
-        handle = uid_to_handle(uid)
+	handle = uid_to_handle(uid)
 	accessed = item.text
-        if handle:
-            print('{} corresponds to {}'.format(uid, handle))
-            popular_items.append((handle, accessed))
-        if len(popular_items) > 4:
-            #print('Found enough popular items!')
-            break
+	if handle:
+	    print('{} corresponds to {}'.format(uid, handle))
+	    popular_items.append((handle, accessed))
+	if len(popular_items) > 4:
+	    #print('Found enough popular items!')
+	    break
 
 # build a new tree for uploading
 root = ET.Element("document")
